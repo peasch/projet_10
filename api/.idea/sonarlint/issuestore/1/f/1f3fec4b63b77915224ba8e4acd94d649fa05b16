@@ -1,0 +1,10 @@
+
+U
+java:S1128	"@Remove this unused import 'com.peasch.model.dto.copies.CopyDto'.(ÊÉô&
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶þÿÿÿÿ
+[
+java:S1128"ERemove this unused import 'com.peasch.model.dto.Book.BookWithAllDTO'.(ŒÆŒ€
+P	java:S125="<This block of commented-out lines of code should be removed.(Í‘¼e
+V	java:S125F"<This block of commented-out lines of code should be removed.(¶Ý‰Šÿÿÿÿÿ
+R
+java:S36551"7Call "Optional#isPresent()" before accessing the value.(îÁ¡¾úÿÿÿÿ

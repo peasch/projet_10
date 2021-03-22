@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/fragments.html ::headertags">
+    <title>liste users</title>
+</head>
+<body th:data-spy="scroll" th:data-target=".navbar" th:data-ofset="60"
+      style="background-image:url(/static/img/bibli.jpg)">
+
+<div th:insert="fragments/fragments.html :: nav"></div>
+<section id="about" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+            <span>Nous sommes le : </span>
+            <p th:text="${#temporals.format(localDate, 'dd-MM-yyyy')}"></p>
+        </div>
+    </div>
+
+</section>
+<section id="skills">
+    <div class="red-divider"></div>
+
+    <div class="heading">
+        <h2>Profil personnel</h2>
+        <div class="container">
+            <div class="row">
+                <div class="red-divider"></div>
+                <div class="container skillancien">
+                    <div align="center">
+                        <span>Nom : </span> <span th:text="${user.name}">user</span><br>
+                        <span>Prénom : </span><span th:text="${user.firstName}">user1</span><br>
+                        <span>Nom d'utilisateur : </span><span th:text="${user.userName}">user2</span><br>
+                        <span>Email : </span><span th:text="${user.email}">user1</span><br>
+
+                    </div>
+                </div>
+                <div class="red-divider"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="container-fluid">
+        <div class="white-divider"></div>
+        <div class="heading">
+            <h2>Emprunts actifs</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="red-divider"></div>
+                    <div class="container skillancien">
+
+                        <div class="row" style="text-align: center">
+                            <div th:each="borrowing: ${borrowings}" th:if="${!borrowing.returned}"
+                                 class="col-lg-4 col-sm-6 col-xs-12">
+                                <div style="margin:10px">
+                                    <span th:text="${borrowing.getCopy().getBook().getTitle()}">user</span><span> : </span>
+                                    <span th:text="${borrowing.getCopy().getBook().getAuthor().getFirstName()}">user1</span>
+                                    <span th:text="${borrowing.getCopy().getBook().getAuthor().getName()}">user2</span>
+                                </div>
+                                <div>
+                                    <a th:href="@{|/book/describe/${borrowing.getCopy().getBook().getId()}|}">
+
+                                    <img th:src="@{${borrowing.getCopy().getBook().getCover()}}" alt="illustration"
+                                         src=""/></a>
+                                </div>
+                                <div th:switch="${borrowing.extended}">
+                                    <div th:case="false">
+                                        <span>Statut de l'emprunt : en cours, non prolongé. </span><br>
+                                        <span>Retour prévu le : </span><span
+                                            th:text="${#temporals.format(localDate.parse(borrowing.returnDate), 'dd-MM-yyyy')}"></span><br>
+                                        <span>il reste : </span><span th:text="${borrowing.daysToGo}"></span> <span>jours.</span><br>
+                                        <div th:if="${borrowing.daysToGo>0}">
+                                            <a th:class="button1" th:href="@{|/borrowings/extend/${borrowing.id}|}"
+                                               class="btn btn-outline-dark">Prolonger la durée ?</a>
+                                        </div>
+                                    </div>
+                                    <div th:case="true">
+                                        <span>Statut de l'emprunt : en cours, prolongé. </span><br>
+                                        <span>Retour prévu le : </span><span
+                                            th:text="${#temporals.format(localDate.parse(borrowing.returnDate), 'dd-MM-yyyy')}"></span><br>
+                                        <span>il reste : </span><span th:text="${borrowing.daysToGo}"></span> <span>jours.</span><br>
+                                        <div th:if="${borrowing.daysToGo>0}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="red-divider"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section id="education">
+    <div class="container">
+        <div class="red-divider"></div>
+
+    </div>
+</section>
+<section id="portfolio">
+    <div class="container">
+        <div class="white-divider"></div>
+
+    </div>
+</section>
+<section id="recommandations">
+    <div class="container">
+        <div class="red-divider"></div>
+
+    </div>
+</section>-->
+
+
+<footer th:insert="fragments/fragments.html ::footer" class="text-center">
+</footer>
+<div th:insert="fragments/fragments.html :: scripts"></div>
+</body>
+
+</html>

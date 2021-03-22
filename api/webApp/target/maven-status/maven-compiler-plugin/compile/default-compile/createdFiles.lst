@@ -1,0 +1,15 @@
+com\peasch\controller\BookController.class
+com\peasch\controller\AuthorController.class
+com\peasch\controller\UserController.class
+com\peasch\controller\CategoryController.class
+com\peasch\controller\security\config\JwtConfigurer.class
+com\peasch\controller\LibraryController.class
+com\peasch\controller\security\config\CustomUserSecurity.class
+com\peasch\controller\BorrowingController.class
+com\peasch\controller\security\config\JwtTokenFilter.class
+com\peasch\controller\security\service\CustomUserDetailsService.class
+com\peasch\controller\AuthenticationController.class
+com\peasch\controller\LibraryApplication.class
+com\peasch\controller\security\config\JwtTokenProvider.class
+com\peasch\controller\security\config\SecurityConfig.class
+com\peasch\controller\CopyController.class

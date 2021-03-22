@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/fragments.html ::headertags">
+    <title>liste users</title>
+</head>
+<body th:data-spy="scroll" th:data-target=".navbar" th:data-ofset="60"
+      style="background-image:url(/static/img/bibli.jpg)">
+
+<div th:insert="fragments/fragments.html :: nav"></div>
+<section id="about" class="container-fluid">
+    <div class="row">
+
+    </div>
+
+</section>
+<section id="skills">
+    <div class="red-divider"></div>
+    <div class="heading">
+        <h2><span th:text="${book.title}">user</span></h2>
+        <h3><span th:text="${book.author.getFirstName()}">user1</span> <span th:text="${book.author.getName()}"></span>
+        </h3>
+        <div class="container">
+            <div class="row">
+                <div class="red-divider"></div>
+                <div class="container skillancien" style="text-align: center">
+
+                    <div th:text="${book.summary}">user2</div>
+                    <br>
+                    <img th:src="@{${book.getCover()}}" alt="illustration" src=""/>
+                </div>
+            </div></div>
+        <div class="container" style="text-align: center">
+            <div class="row" style="text-align: center">
+                <div class="col-sm-12" style="text-align: center;margin:20px">
+                    <h6>disponibilités</h6>
+
+                    <div th:each="library: ${libraries}">
+                        <span th:text="${library.name} "></span><span>:</span>
+                        <span th:text="${bookMap.get(library.id)}"></span><span> exemplaires disponibles</span>
+                    </div>
+                </div>
+            </div>
+            <div class="red-divider"></div>
+    </div>
+
+
+    </div>
+</section>
+<section id="experience">
+    <div class="container-fluid">
+        <div class="white-divider"></div>
+
+    </div>
+</section>
+<section id="education">
+    <div class="container">
+        <div class="red-divider"></div>
+
+    </div>
+</section>
+<section id="portfolio">
+    <div class="container">
+        <div class="white-divider"></div>
+
+    </div>
+</section>
+<section id="recommandations">
+    <div class="container">
+        <div class="red-divider"></div>
+
+    </div>
+</section>
+
+
+<footer th:insert="fragments/fragments.html ::footer" class="text-center">
+</footer>
+<div th:insert="fragments/fragments.html :: scripts"></div>
+</body>
+
+</html>

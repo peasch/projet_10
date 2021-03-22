@@ -1,0 +1,7 @@
+
+M
+java:S16119"2Remove the parentheses around the "role" parameter(ˆúÁ’úÿÿÿÿ
+G
+java:S16029",Remove useless curly braces around statement(ˆúÁ’úÿÿÿÿ
+©
+java:S1130"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(žÌÃŸ
