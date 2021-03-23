@@ -19,5 +19,8 @@ public interface CopyService {
     Map<Integer,Integer> findCopiesInLibrary(Integer bookId);
     CopyWithALLDTO findByCopyWithAll(Copy copy);
     CopyWithALLDTO setUnavailableCopy( CopyWithALLDTO copy);
+    int findNumberOfCopiesAvailable(Integer bookId);
+    List<CopyDto> findCopiesByBook_Id(Integer bookId);
+    int findNumberOfCopies(Integer bookId);
 }
 

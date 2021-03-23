@@ -2,7 +2,6 @@ package com.peasch.controller;
 
 import com.peasch.model.dto.copies.CopyDto;
 import com.peasch.model.dto.copies.CopyWithALLDTO;
-import com.peasch.model.entities.Copy;
 import com.peasch.service.CopyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -36,5 +35,14 @@ public class CopyController {
     @GetMapping("book/{id}")
     public Map<Integer,Integer> getCopiesofBookInLibraries(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
         return service.findCopiesInLibrary(id);
+    }
+
+    @GetMapping("quantities/available/{id}")
+    public int getNumberOfCopiesAvailable(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
+        return service.findNumberOfCopiesAvailable(id);
+    }
+    @GetMapping("quantities/{id}")
+    public int getNumberOfCopies(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
+        return service.findNumberOfCopies(id);
     }
 }

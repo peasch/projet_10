@@ -77,6 +77,10 @@ public class CopyServiceImpl implements CopyService {
         List<Copy> copies = copyDao.findCopiesByBook_IdAndAvailableAndLibrary_Id(bookId, true, libId);
         return copies.stream().map(x -> copyJMapper.getDestination(x)).collect(Collectors.toList());
     }
+    public List<CopyDto> findCopiesByBook_Id(Integer bookId) {
+        List<Copy> copies = copyDao.findCopiesByBook_Id(bookId);
+        return copies.stream().map(x -> copyJMapper.getDestination(x)).collect(Collectors.toList());
+    }
 
     public Map<Integer, Integer> findCopiesInLibrary(Integer bookId) {
         List<LibraryDto> libraries = libService.getLibraries();
@@ -87,6 +91,19 @@ public class CopyServiceImpl implements CopyService {
         return copiesInLibraries;
     }
 
+    public int findNumberOfCopiesAvailable(Integer bookId){
+        List<LibraryDto> libraries = libService.getLibraries();
+        int numberOfCopies=0;
+        for (LibraryDto library : libraries) {
+            numberOfCopies= this.findCopiesByBook_IdAndAvailable(bookId, library.getId()).size() + numberOfCopies;
+        }
+        return numberOfCopies;
+    }
+
+    public int findNumberOfCopies(Integer bookId){
+          return this.findCopiesByBook_Id(bookId).size();
+
+    }
     public CopyWithALLDTO setUnavailableCopy( CopyWithALLDTO copy){
         CopyWithALLDTO copyWithALLDTO = this.findById(copy.getId());
         copyWithALLDTO.setAvailable(false);
