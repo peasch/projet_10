@@ -57,9 +57,16 @@ public interface MicroserviceUserProxy {
     @GetMapping("/copies/book/{id}")
     Map<Integer,Integer> getCopiesofBookInLibraries(@PathVariable(value="id")Integer id,@RequestHeader(name = "Authorization") String token);
 
+    @GetMapping("/copies/quantities/available/{id}")
+    int getNumberOfCopiesAvailable(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/copies/quantities/{id}")
+    int getNumberOfCopies(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token);
 //---------------------BORROWINGS-----------------------------
 
     @PostMapping("/borrowings/extend/{id}")
     BorrowingBean extendBorrowing(@PathVariable(value="id")Integer id,@RequestHeader(name = "Authorization") String token);
 
+    @GetMapping("/borrowings/rentable/{id}")
+    Boolean rentableBook (@PathVariable(value="id")Integer bookId,@RequestHeader(name = "Authorization") String token);
 }
