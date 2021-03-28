@@ -3,8 +3,11 @@ package com.peasch.controller;
 import com.peasch.model.dto.Book.BookDto;
 import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
 import com.peasch.model.entities.Book;
+import com.peasch.model.entities.Copy;
 import com.peasch.model.entities.Research;
+import com.peasch.repository.dao.BorrowingDao;
 import com.peasch.service.BookService;
+import com.peasch.service.BorrowingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +19,6 @@ public class BookController {
 
     @Autowired
     private BookService service;
-
 
     @GetMapping
     public List<BookDto> getBooks( @RequestHeader(name = "Authorization") String token){
@@ -38,5 +40,8 @@ public class BookController {
         return service.findBooksByResearch(research);
 
     }
+
+
+
 
 }

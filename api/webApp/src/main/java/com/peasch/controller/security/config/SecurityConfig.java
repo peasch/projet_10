@@ -46,6 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/borrowings/return/**").hasAnyRole(EMPLOYEE,ADMIN)
                 .antMatchers("/borrowings/add").hasAnyRole(EMPLOYEE,ADMIN)
                 .antMatchers("/borrowings/extend/**").hasAnyRole(EMPLOYEE,ADMIN,USER)
+                .antMatchers("/borrowings/**").hasAnyRole(EMPLOYEE,ADMIN,USER)
                 /*.antMatchers("/user/username/**").authenticated()*/
                 /*.anyRequest().authenticated()*/
                 .and().exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint()).and()

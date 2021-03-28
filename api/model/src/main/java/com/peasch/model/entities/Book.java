@@ -33,8 +33,20 @@ public class Book {
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
     private Set<Copy> copiesOfBook = new HashSet<>();
 
+    @OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
+    private Set<WaitListDemand> demands = new HashSet<>();
+
     public Book() {
     }
+
+    public Set<WaitListDemand> getDemands() {
+        return demands;
+    }
+
+    public void setDemands(Set<WaitListDemand> demands) {
+        this.demands = demands;
+    }
+
     public String getCover() {
         return cover;
     }

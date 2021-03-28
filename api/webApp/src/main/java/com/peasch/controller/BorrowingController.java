@@ -8,9 +8,11 @@ import com.peasch.model.dto.User.UserDto;
 import com.peasch.model.entities.Borrowing;
 import com.peasch.service.BorrowingService;
 import com.peasch.service.UserService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
@@ -52,8 +54,26 @@ public class BorrowingController {
 
     @PostMapping("return/{id}")
     public BorrowingWithAllDTO returnBorrowing (@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
-
         UserDto employee = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
         return service.returnBorrowing(id,employee);
+    }
+    @GetMapping("rentable/{id}")
+    public Boolean rentableBook (@PathVariable(value="id")Integer bookId,@RequestHeader(name = "Authorization") String token){
+        UserDto user = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
+        return service.bookRentable(user.getId(),bookId);
+    }
+    @GetMapping("rent/{id}")
+    public LocalDate findFirstReturnDateOfBook(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token) {
+        return service.findBorrowingsByBookId(id);
+    }
+
+    @GetMapping("unreturned/{id}")
+    public Set<BorrowingWithAllDTO> findUnReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token){
+        return service.findUnReturnedBorrowingsByUserId(id);
+    }
+
+    @GetMapping("returned/{id}")
+    public Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token){
+        return service.findReturnedBorrowingsByUserId(id);
     }
 }

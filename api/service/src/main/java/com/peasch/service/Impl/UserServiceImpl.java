@@ -102,7 +102,7 @@ public class UserServiceImpl implements UserService {
         UserWithAllDTO userDto = userWithAllToDTOMapper.getDestination(user);
         Set<Role> roles = user.getRoles();
         userDto.setRoles(roles.stream().map(x->roleToDTOMapper.getDestination(x)).collect(Collectors.toSet()));
-        userDto.setBorrowings(borrowingService.findBorrowingsByUserId(user.getId()));
+      /*  userDto.setBorrowings(borrowingService.findBorrowingsByUserId(user.getId()));*/
         return userDto;
     }
 

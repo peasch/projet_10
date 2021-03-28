@@ -12,6 +12,7 @@ import com.peasch.model.dto.Role.RoleDto;
 import com.peasch.model.dto.User.UserDto;
 import com.peasch.model.dto.User.UserWithAllDTO;
 import com.peasch.model.dto.User.UserWithRoleDTO;
+import com.peasch.model.dto.WaitList.WaitListWithAllDto;
 import com.peasch.model.dto.copies.CopyDto;
 import com.peasch.model.dto.copies.CopyWithALLDTO;
 import com.peasch.model.dto.libraries.LibraryDto;
@@ -159,5 +160,17 @@ public class JmapperInit {
     @Bean
     JMapper<Library, LibraryDto> dtoToLibraryMapper() {
         return new JMapper<>(Library.class, LibraryDto.class);
+    }
+
+    //----------------------------------WaitList------------------------------------------
+
+    @Bean
+    JMapper<WaitListWithAllDto, WaitListDemand> waitListToDTOMapper() {
+        return new JMapper<>(WaitListWithAllDto.class,WaitListDemand.class);
+    }
+
+    @Bean
+    JMapper<WaitListDemand, WaitListWithAllDto> dtoToWaitListMapper() {
+        return new JMapper<>(WaitListDemand.class, WaitListWithAllDto.class);
     }
 }

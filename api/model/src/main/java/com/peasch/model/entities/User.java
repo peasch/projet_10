@@ -29,6 +29,8 @@ public class User implements Serializable{
     @Column(name = "birthdate")
     private String birthDate;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    private Set<WaitListDemand> demands = new HashSet<>();
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<Borrowing> borrowings = new HashSet<>();
@@ -39,7 +41,13 @@ public class User implements Serializable{
     public User() {
     }
 
+    public Set<WaitListDemand> getDemands() {
+        return demands;
+    }
 
+    public void setDemands(Set<WaitListDemand> demands) {
+        this.demands = demands;
+    }
 
     public int getId() {
         return id;

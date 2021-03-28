@@ -9,17 +9,13 @@ import com.peasch.model.dto.copies.CopyDto;
 import com.peasch.model.dto.copies.CopyWithALLDTO;
 import com.peasch.model.entities.Borrowing;
 import com.peasch.model.entities.Copy;
-import com.peasch.model.entities.User;
 import com.peasch.repository.dao.BorrowingDao;
+import com.peasch.service.BookService;
 import com.peasch.service.BorrowingService;
 import com.peasch.service.CopyService;
-import com.peasch.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -51,6 +47,8 @@ public class BorrowingServiceImpl implements BorrowingService {
     private JMapper<Copy, CopyWithALLDTO>  dtoToCopyWithAllMapper;
     @Autowired
     private CopyService copyService;
+    @Autowired
+    private BookService bookService;
 
 
 
@@ -87,15 +85,33 @@ public class BorrowingServiceImpl implements BorrowingService {
     }
 
 
-    public Set<BorrowingWithAllDTO> findBorrowingsByUserId(Integer id) {
-        Set<BorrowingWithAllDTO> borrowDtos = new HashSet<>();
-    Set<Borrowing> borrowings = borrowingDao.findBorrowingByUser_Id(id);
+    public Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(Integer id) {
+        Set<BorrowingWithAllDTO> returnedBorrowDtos = new HashSet<>();
+    Set<Borrowing> borrowings = borrowingDao.findBorrowingByUser_IdAndAndReturnedIsTrue(id);
     for (Borrowing borrow : borrowings){
-        borrowDtos.add(this.findByIdWithAll(borrow.getId()));
+        returnedBorrowDtos.add(this.findByIdWithAll(borrow.getId()));
     }
-    return borrowDtos;
+    return returnedBorrowDtos;
+    }
+    public Set<BorrowingWithAllDTO> findUnReturnedBorrowingsByUserId(Integer id) {
+        Set<BorrowingWithAllDTO> unReturnedBorrowDtos = new HashSet<>();
+        Set<Borrowing> borrowings = borrowingDao.findBorrowingByUser_IdAndAndReturnedIsFalse(id);
+        for (Borrowing borrow : borrowings){
+            unReturnedBorrowDtos.add(this.findByIdWithAll(borrow.getId()));
+        }
+        return unReturnedBorrowDtos;
     }
 
+    public Boolean bookRentable(Integer userId, Integer bookId){
+        Boolean rentable=true;
+        Set<BorrowingWithAllDTO> borrowDtos = this.findUnReturnedBorrowingsByUserId(userId);
+        for (BorrowingWithAllDTO borrowingWithAllDTO:borrowDtos){
+            if (borrowingWithAllDTO.getCopy().getBook().getId()==bookId){
+                rentable= false;
+            }
+        }
+        return  rentable;
+    }
 
 
     public BorrowingWithAllDTO extendByIdWithAll(Integer id){
@@ -151,4 +167,26 @@ public class BorrowingServiceImpl implements BorrowingService {
         copyService.setUnavailableCopy(copyDTO);
         return borrowingWithAllToDTOMapper.getDestination(borrowingDao.save(dtoToBorrowingWithAllMapper.getDestination(borrowing)));
     }
+
+    public LocalDate findBorrowingsByBookId (Integer bookId){
+        List<CopyDto> copies = copyService.findCopiesByBook_Id(bookId);
+        List<BorrowingWithAllDTO> rentCopies=new ArrayList<>();
+        String firstDate;
+        for (CopyDto copy : copies){
+            Borrowing borrow =borrowingDao.findBorrowingByCopy_IdAndReturnedIsFalse(copy.getId());
+            BorrowingWithAllDTO borrowingDto = borrowingWithAllToDTOMapper.getDestination(borrow);
+            rentCopies.add(borrowingDto);
+        }
+        LocalDate firstDateOfBorrow = LocalDate.parse(rentCopies.get(0).getReturnDate());
+        for (BorrowingWithAllDTO borrowingWithAllDTO : rentCopies){
+            String returnDate = borrowingWithAllDTO.getReturnDate();
+            LocalDate date = LocalDate.parse(returnDate);
+            if (date.compareTo(firstDateOfBorrow)<0){
+                firstDateOfBorrow=date;
+            }
+        }
+        return firstDateOfBorrow;
+    }
+
+
 }
