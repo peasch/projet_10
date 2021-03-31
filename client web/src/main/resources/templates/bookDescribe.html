@@ -10,65 +10,70 @@
 <section id="about" class="container-fluid">
     <div class="red-divider"></div>
     <div class="heading">
+
         <h2><span th:text="${book.title}">user</span></h2>
         <h3><span th:text="${book.author.getFirstName()}">user1</span> <span th:text="${book.author.getName()}"></span>
         </h3>
-        <div class="container">
-            <div class="row">
-                <div class="red-divider"></div>
-                <div class="col col-sm-12" style="text-align: center;margin: 20px">
+    </div>
+    <div class="heading">
+        <div class="red-divider"></div>
+        <div class="col col-sm-12" style="text-align: center;margin: 20px auto">
 
-                    <div th:text="${book.summary}">user2</div>
-                    <br>
-                    <img th:src="@{${book.getCover()}}" alt="illustration" src=""/>
-                </div>
-            </div>
-            <div class="row" style="text-align: center">
-                <div class="red-divider"></div>
-                <div class="col col-sm-12" style="text-align: center;margin:20px">
-                    <h6>disponibilités</h6>
-                    <!--<div th:each="library: ${libraries}">
-                        <span th:text="${library.name} "></span><span>:</span>
-                        <span th:text="${bookMap.get(library.id)}"></span><span> exemplaires disponibles</span>
-                    </div>-->
-                    <span th:text="${numberOfCopiesAvailable}"></span><span> exemplaires disponibles, sur </span><span
-                        th:text="${numberOfCopies}"></span><span> exemplaires.</span>
-                </div>
-                <div th:if="${numberOfCopiesAvailable==0 && rentable==true}" class="col col-sm-12" style="text-align: center;margin:20px" >
+            <div th:text="${book.summary}">user2</div>
+            <br>
+            <img th:src="@{${book.getCover()}}" alt="illustration" src=""/>
+        </div>
+    </div>
+</section>
+<section id="education" class="container-fluid">
+    <div class="heading">
+        <div class="col col-sm-12" style="padding-top: 30px">
+            <h4>disponibilités</h4>
+            <!--<div th:each="library: ${libraries}">
+                <span th:text="${library.name} "></span><span>:</span>
+                <span th:text="${bookMap.get(library.id)}"></span><span> exemplaires disponibles</span>
+            </div>-->
+            <span th:text="${numberOfCopiesAvailable}"></span><span> exemplaires disponibles, sur </span><span
+                th:text="${numberOfCopies}"></span><span> exemplaires.</span>
+        </div>
+        <div class="black-divider"></div>
+        <div class="col col-sm-12" >
+            <span th:if="${numberOfCopiesAvailable==0}"><h6>Date de retour prévue :</h6></span>
+            <h6><span th:text="${#temporals.format(firstDate, 'EEEE, d MMMM yyyy')}"></span></h6>
+        </div>
+        <div class="black-divider"></div>
+        <div th:if="${numberOfCopiesAvailable==0 && rentable==true && !alreadydemanded}" class="col col-sm-12"
+             style="text-align: center;margin:20px">
 
-                        <a th:class="button1" th:href="@{|/home|}" class="btn btn-outline-dark" style="color:black">Demande de réservation</a>
-
-                </div>
-            </div>
-
-            <div class="red-divider"></div>
+            <a th:class="button2" th:href="@{|/book/waitList/add/${book.id}|}" style="color: black">Demande de
+                réservation</a>
+            <div class="black-divider"></div>
+        </div>
+        <div th:if="${rentable==false}">
+            <h4>Vous ête déjà en possession de cet ouvrage.</h4>
+            <div class="black-divider"></div>
+        </div>
+        <div th:if="${waitListable==false}" >
+            <h4>Impossible de le réserver pour le moment</h4>
+            <div class="black-divider"></div>
+        </div>
+        <div th:if="${alreadydemanded}" class="col col-sm-12">
+            <h4>Vous avez déjà une réservation pour cet ouvrage</h4>
+            <a th:class="button2" th:href="@{|/book/waitList/delete/${book.id}|}" style="color: black">Annuler ma réservation</a>
+            <div class="black-divider"></div>
+        </div>
+        <div  class="col col-sm-12">
+            <a th:class="button2" th:href="@{|/profile|}" style="color: black">Consulter mes réservations</a>
         </div>
 
-
     </div>
 </section>
-<section id="experience">
-    <div class="container-fluid">
-        <div class="white-divider"></div>
 
-    </div>
-</section>
-<section id="education">
-    <div class="container">
-        <div class="red-divider"></div>
-
-    </div>
-</section>
-<section id="portfolio">
-    <div class="container">
-        <div class="white-divider"></div>
-
-    </div>
-</section>
-<section id="recommandations">
-    <div class="container">
-        <div class="red-divider"></div>
-
+<section id="recommandations" class="container-fluid">
+    <div class="heading">
+        <div class="col col-sm-12" >
+            <a th:class="button2" th:href="@{|/collection|}" style="color: black">Retour</a>
+        </div>
     </div>
 </section>
 

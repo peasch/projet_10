@@ -40,7 +40,7 @@
     </div>
 </section>
 
-<section id="experience">
+<section id="experience" th:if="${unreturned.size()!=0}">
     <div class="container-fluid">
         <div class="white-divider"></div>
         <div class="heading">
@@ -49,9 +49,8 @@
                 <div class="row">
                     <div class="red-divider"></div>
                     <div class="container skillancien">
-
                         <div class="row" style="text-align: center">
-                            <div th:each="borrowing: ${borrowings}" th:if="${!borrowing.returned}"
+                            <div th:each="borrowing: ${unreturned}"
                                  class="col-lg-4 col-sm-6 col-xs-12">
                                 <div style="margin:10px">
                                     <span th:text="${borrowing.getCopy().getBook().getTitle()}">user</span><span> : </span>
@@ -61,14 +60,14 @@
                                 <div>
                                     <a th:href="@{|/book/describe/${borrowing.getCopy().getBook().getId()}|}">
 
-                                    <img th:src="@{${borrowing.getCopy().getBook().getCover()}}" alt="illustration"
-                                         src=""/></a>
+                                        <img th:src="@{${borrowing.getCopy().getBook().getCover()}}" alt="illustration"
+                                             src=""/></a>
                                 </div>
                                 <div th:switch="${borrowing.extended}">
                                     <div th:case="false">
                                         <span>Statut de l'emprunt : en cours, non prolongé. </span><br>
                                         <span>Retour prévu le : </span><span
-                                            th:text="${#temporals.format(localDate.parse(borrowing.returnDate), 'dd-MM-yyyy')}"></span><br>
+                                            th:text="${#temporals.format(borrowing.returnDate, 'dd-MM-yyyy')}"></span><br>
                                         <span>il reste : </span><span th:text="${borrowing.daysToGo}"></span> <span>jours.</span><br>
                                         <div th:if="${borrowing.daysToGo>0}">
                                             <a th:class="button1" th:href="@{|/borrowings/extend/${borrowing.id}|}"
@@ -78,40 +77,77 @@
                                     <div th:case="true">
                                         <span>Statut de l'emprunt : en cours, prolongé. </span><br>
                                         <span>Retour prévu le : </span><span
-                                            th:text="${#temporals.format(localDate.parse(borrowing.returnDate), 'dd-MM-yyyy')}"></span><br>
+                                            th:text="${#temporals.format(borrowing.returnDate, 'dd-MM-yyyy')}"></span><br>
                                         <span>il reste : </span><span th:text="${borrowing.daysToGo}"></span> <span>jours.</span><br>
                                         <div th:if="${borrowing.daysToGo>0}">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
-
                     </div>
-                    <div class="red-divider"></div>
 
+                </div>
+                <div class="red-divider"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div style="text-align: center">
+
+        </div>
+    </div>
+</section>
+<section id="recommandations" th:if="${returned.size()!=0}">
+
+    <div class="container">
+        <div class="red-divider"></div>
+        <div class="heading">
+            <h3>Livres déjà empruntés:</h3>
+
+            <div class="row" th:each="borrowing: ${returned}" style="text-align: center">
+                <div class="col-sm-12">
+                    <span th:text="${borrowing.getCopy().getBook().getTitle()}">user</span><span> : </span>
+                    <span th:text=" ${borrowing.getCopy().getBook().getAuthor().getFirstName()}"></span>
+                    <span th:text=" ${borrowing.getCopy().getBook().getAuthor().getName()}"></span><br>
+                    <span>emprunté le : </span><span th:text="${borrowing.getBorrowingDate()}"></span>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--<section id="education">
-    <div class="container">
-        <div class="red-divider"></div>
+<section class="skills">
+    <div class="heading">
+        <div class="black-divider"></div>
+        <h3>Liste des demandes de réservation.</h3>
+        <div class="row" th:each="waitList :${waitLists}" style="justify-content: center ">
+            <div class="col col-sm-3" >
+                <a th:class="button3" th:href="@{|/book/describe/${waitList.getBook().getId()}|}" style="color: black"><span th:text="${waitList.getBook().getTitle()}"></span></a>
+                <span>de </span><span th:text="${waitList.getBook().getAuthor().getFirstName()}"></span>
+                <span th:text="${waitList.getBook().getAuthor().getName()}"></span>
+            </div>
+            <div class="col col-sm-3"style="padding: 5px">
+                <span>Disponible le </span><span th:text="${#temporals.format(waitList.getFirstReturnDate(), 'EEEE, d MMMM yyyy')}"></span>
+            </div>
+            <div class="col col-sm-3">
+               <a th:class="button3" th:href="@{|/profile/deleteWaitList/${waitList.getId()}|}" style="color: black">Annuler ma réservation</a>
+            </div>
 
+        </div>
+        <div class="black-divider"></div>
     </div>
 </section>
+<!--
 <section id="portfolio">
     <div class="container">
         <div class="white-divider"></div>
 
     </div>
 </section>
-<section id="recommandations">
-    <div class="container">
-        <div class="red-divider"></div>
-
-    </div>
-</section>-->
+-->
 
 
 <footer th:insert="fragments/fragments.html ::footer" class="text-center">

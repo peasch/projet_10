@@ -1,10 +1,12 @@
 package com.peasch.webbooks.Beans;
 
+import java.time.LocalDate;
+
 public class BorrowingBean {
     private static final long serialVersionUID = 1L;
     private int id;
-    private String borrowingDate;
-    private String returnDate;
+    private LocalDate borrowingDate;
+    private LocalDate returnDate;
     private boolean extended;
     private UserBean user;
     private CopyBean copy;
@@ -24,19 +26,19 @@ public class BorrowingBean {
         this.id = id;
     }
 
-    public String getBorrowingDate() {
+    public LocalDate getBorrowingDate() {
         return borrowingDate;
     }
 
-    public void setBorrowingDate(String borrowingDate) {
+    public void setBorrowingDate(LocalDate borrowingDate) {
         this.borrowingDate = borrowingDate;
     }
 
-    public String getReturnDate() {
+    public LocalDate getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(String returnDate) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
 

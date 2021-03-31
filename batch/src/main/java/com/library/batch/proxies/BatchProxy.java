@@ -1,13 +1,8 @@
 package com.library.batch.proxies;
 
-import com.library.batch.Beans.BorrowingBean;
-import com.library.batch.Beans.UserBean;
-import com.library.batch.Beans.UserConnected;
+import com.library.batch.Beans.*;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Set;
@@ -21,8 +16,20 @@ public interface BatchProxy {
     @GetMapping(value="/users")
     List<UserBean> getUsers();
 
+//====================== Borrowings ===============================
+
     @GetMapping("/borrowings/late")
     Set<BorrowingBean> findAllTooLateBorrowings(@RequestHeader(name = "Authorization") String token);
 
+//====================== Books ====================================
 
+    @GetMapping("/books/availables")
+    List<BookBean> checkAvailableBooks(@RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/checkWaitList")
+    WaitListBean checkWaitListOfBook(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+//====================== WaitList =================================
+    @GetMapping("/waitList/waitListed")
+     boolean isWaitListed(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
 }

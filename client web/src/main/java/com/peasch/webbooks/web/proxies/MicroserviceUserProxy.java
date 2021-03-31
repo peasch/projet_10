@@ -5,8 +5,10 @@ import com.peasch.webbooks.Beans.*;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @FeignClient(name="MICROSERVICE-LIBRARY-MODEL", url = "localhost:8181")
 public interface MicroserviceUserProxy {
@@ -28,7 +30,7 @@ public interface MicroserviceUserProxy {
     @GetMapping("/user/username/{userName}")
     UserBean getUserByUserName(@PathVariable(value = "userName")String userName,@RequestHeader(name = "Authorization") String token);
 
-    /*----------------------LIBRARY-------------------------*/
+    /*---------------------- LIBRARY -------------------------*/
 
     @GetMapping("/libraries")
     List<LibraryBean> getLibraries(@RequestHeader(name = "Authorization") String token);
@@ -37,7 +39,7 @@ public interface MicroserviceUserProxy {
     LibraryBean getLibraryById(@PathVariable(value = "id")Integer id,@RequestHeader(name = "Authorization") String token);
 
 
-    /*----------------------BOOKS-----------------------*/
+    /*---------------------- BOOKS -----------------------*/
 
     @GetMapping("/books")
     List<BookBean> getBooks(@RequestHeader(name = "Authorization") String token);
@@ -62,11 +64,45 @@ public interface MicroserviceUserProxy {
 
     @GetMapping("/copies/quantities/{id}")
     int getNumberOfCopies(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token);
-//---------------------BORROWINGS-----------------------------
+//--------------------- BORROWINGS -----------------------------
 
     @PostMapping("/borrowings/extend/{id}")
     BorrowingBean extendBorrowing(@PathVariable(value="id")Integer id,@RequestHeader(name = "Authorization") String token);
 
     @GetMapping("/borrowings/rentable/{id}")
     Boolean rentableBook (@PathVariable(value="id")Integer bookId,@RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/borrowings/rent/{id}")
+    LocalDate findFirstReturnDateOfBook(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/borrowings/unreturned/{id}")
+    Set<BorrowingBean> findUnReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token);
+
+
+    @GetMapping("/borrowings/returned/{id}")
+    Set<BorrowingBean> findReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token);
+
+    //-------------------------- WaitList -------------------------------------
+
+    @GetMapping("/waitList/add/{id}")
+    void addUserToWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/showList/{id}")
+    List<WaitListBean> getWaitListsOfBook(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/isWaitListable/{id}")
+    Boolean isWaitListable(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+
+    @GetMapping("/waitList/exist/{id}")
+    Boolean existingWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/getWaitList/{id}")
+    WaitListBean getWaitListOfUserThisBook(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/delete/{id}")
+    void deleteWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/user/")
+    List<WaitListBean> getAllWLofUser( @RequestHeader(name = "Authorization") String token);
 }

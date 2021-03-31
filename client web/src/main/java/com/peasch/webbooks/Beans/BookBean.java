@@ -11,6 +11,7 @@ public class BookBean {
     private CategoryBean category;
     private AuthorBean author;
     private String cover;
+    private Boolean available;
     private Set<CopyBean> copiesOfBook = new HashSet<>();
 
     public BookBean() {
@@ -83,5 +84,13 @@ public class BookBean {
 
     public void setCopiesOfBook(Set<CopyBean> copiesOfBook) {
         this.copiesOfBook = copiesOfBook;
+    }
+
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
     }
 }

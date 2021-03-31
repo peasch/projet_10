@@ -18,8 +18,8 @@ public class CustomErrorDecoder implements ErrorDecoder {
         }
         if(response.status()==403){
             return new BadMotDePasseException("mot de passe incorrect");
+        }else {
+            return defaultErrorDecoder.decode(s, response);
         }
-        return defaultErrorDecoder.decode(s,response);
-
     }
 }

@@ -1,6 +1,8 @@
 package com.peasch.webbooks.web.Controller;
 
+import com.peasch.webbooks.Beans.BorrowingBean;
 import com.peasch.webbooks.Beans.UserBean;
+import com.peasch.webbooks.Beans.WaitListBean;
 import com.peasch.webbooks.web.proxies.MicroserviceUserProxy;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,13 +10,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 
 @Controller
@@ -75,14 +78,40 @@ public class UserController {
     @GetMapping("/profile")
     public String profileDisplay(ModelMap model, HttpSession session) {
         UserBean userBean = (UserBean) session.getAttribute("user");
-        String token =(String) session.getAttribute("token");
+        String token = (String) session.getAttribute("token");
         UserBean userSession = mUserProxy.getUserByUserName(userBean.getUserName(), token);
+        List<WaitListBean> waitlists = mUserProxy.getAllWLofUser(token);
+        int userId = userSession.getId();
+        Set<BorrowingBean> unreturned = mUserProxy.findUnReturnedBorrowingsByUserId(userId, token);
+        Set<BorrowingBean> returned = mUserProxy.findReturnedBorrowingsByUserId(userId, token);
         model.addAttribute("user", userSession);
         model.addAttribute("borrowings", userSession.getBorrowings());
         model.addAttribute("localDate", LocalDate.now());
-
+        model.addAttribute("returned", returned);
+        model.addAttribute("unreturned", unreturned);
+        model.addAttribute("waitLists", waitlists);
         return "profile";
     }
+
+    @GetMapping("/profile/deleteWaitList/{id}")
+    public String deleteWLOnProfileDisplay(@PathVariable(name = "id") Integer id, ModelMap model, HttpSession session) {
+        UserBean userBean = (UserBean) session.getAttribute("user");
+        String token = (String) session.getAttribute("token");
+        UserBean userSession = mUserProxy.getUserByUserName(userBean.getUserName(), token);
+        int userId = userSession.getId();
+        mUserProxy.deleteWaitList(id, token);
+        List<WaitListBean> waitlists = mUserProxy.getAllWLofUser(token);
+        Set<BorrowingBean> unreturned = mUserProxy.findUnReturnedBorrowingsByUserId(userId, token);
+        Set<BorrowingBean> returned = mUserProxy.findReturnedBorrowingsByUserId(userId, token);
+        model.addAttribute("user", userSession);
+        model.addAttribute("borrowings", userSession.getBorrowings());
+        model.addAttribute("localDate", LocalDate.now());
+        model.addAttribute("returned", returned);
+        model.addAttribute("unreturned", unreturned);
+        model.addAttribute("waitLists", waitlists);
+        return "profile";
+    }
+
 
     @GetMapping("/logout")
     public String logout(ModelMap model, HttpSession session) {
