@@ -1,31 +1,33 @@
 package com.peasch.model.dto.WaitList;
 
 import com.peasch.model.dto.Book.BookDto;
+import com.peasch.model.dto.Book.BookWithAuthorDTO;
+import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
 import com.peasch.model.dto.User.UserDto;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class WaitListWithAllDto extends WaitListDto {
-    private Set<UserDto> users = new HashSet<>();
-    private Set<BookDto> books = new HashSet<>();
+    private UserDto user;
+    private BookWithoutCopiesDTO book;
 
     public WaitListWithAllDto() {
     }
 
-    public Set<UserDto> getUsers() {
-        return users;
+    public UserDto getUser() {
+        return user;
     }
 
-    public void setUsers(Set<UserDto> users) {
-        this.users = users;
+    public void setUser(UserDto user) {
+        this.user = user;
     }
 
-    public Set<BookDto> getBooks() {
-        return books;
+    public BookWithoutCopiesDTO getBook() {
+        return book;
     }
 
-    public void setBooks(Set<BookDto> books) {
-        this.books = books;
+    public void setBook(BookWithoutCopiesDTO book) {
+        this.book = book;
     }
 }

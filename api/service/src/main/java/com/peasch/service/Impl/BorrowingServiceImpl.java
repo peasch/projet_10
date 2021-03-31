@@ -5,6 +5,7 @@ import com.peasch.model.dto.Borrowings.BorrowingDto;
 import com.peasch.model.dto.Borrowings.BorrowingLateDTO;
 import com.peasch.model.dto.Borrowings.BorrowingWithAllDTO;
 import com.peasch.model.dto.User.UserDto;
+import com.peasch.model.dto.WaitList.WaitListWithAllDto;
 import com.peasch.model.dto.copies.CopyDto;
 import com.peasch.model.dto.copies.CopyWithALLDTO;
 import com.peasch.model.entities.Borrowing;
@@ -13,9 +14,11 @@ import com.peasch.repository.dao.BorrowingDao;
 import com.peasch.service.BookService;
 import com.peasch.service.BorrowingService;
 import com.peasch.service.CopyService;
+import com.peasch.service.WaitListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.Console;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -49,6 +52,8 @@ public class BorrowingServiceImpl implements BorrowingService {
     private CopyService copyService;
     @Autowired
     private BookService bookService;
+    @Autowired
+    private WaitListService waitListService;
 
 
 
@@ -154,6 +159,9 @@ public class BorrowingServiceImpl implements BorrowingService {
         BorrowingWithAllDTO borrowing =borrowingWithAllToDTOMapper.getDestination(borrow);
         borrowing.setReturningEmployee(employee);
         this.save(borrowing);
+        if (waitListService.isWaitListed(copy.getBook().getId())){
+            waitListService.availableBookofWaitLists(borrowing.getCopy().getBook().getId());
+        }
         return  borrowing;
     }
 
@@ -183,6 +191,7 @@ public class BorrowingServiceImpl implements BorrowingService {
             LocalDate date = LocalDate.parse(returnDate);
             if (date.compareTo(firstDateOfBorrow)<0){
                 firstDateOfBorrow=date;
+
             }
         }
         return firstDateOfBorrow;

@@ -8,16 +8,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class WAitListWithUserDto extends WaitListDto  {
-    private Set<UserDto> users = new HashSet<>();
+    private UserDto user;
 
     public WAitListWithUserDto() {
     }
 
-    public Set<UserDto> getUsers() {
-        return users;
+    public UserDto getUser() {
+        return user;
     }
 
-    public void setUsers(Set<UserDto> users) {
-        this.users = users;
+    public void setUser(UserDto user) {
+        this.user = user;
     }
 }

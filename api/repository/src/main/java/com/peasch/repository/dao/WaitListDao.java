@@ -8,5 +8,8 @@ import java.util.List;
 
 public interface WaitListDao extends JpaRepository<WaitListDemand, Integer> {
 
-    List<WaitListDemand> findWaitListDemandsByBook_Id(Integer bookId);
+    List<WaitListDemand> findWaitListDemandsByBookId(Integer bookId);
+    WaitListDemand findWaitListDemandByBook_IdAndUser_Id(Integer bookId, Integer userId);
+    List<WaitListDemand> findWaitListDemandsByUser_Id(Integer id);
+    WaitListDemand findWaitListDemandById(Integer id);
 }

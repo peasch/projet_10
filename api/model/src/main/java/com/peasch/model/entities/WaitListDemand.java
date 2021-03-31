@@ -2,6 +2,7 @@ package com.peasch.model.entities;
 
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,8 +16,11 @@ public class WaitListDemand {
     private int id;
 
     @Column(name="wait_list_date")
-    private String waitListDate;
-
+    private LocalDate waitListDate;
+    @Column(name="first_return_date")
+    private LocalDate firstReturnDate;
+    @Column(name="contact_date")
+    private LocalDate contactDate;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_user")
     private User user;
@@ -36,11 +40,11 @@ public class WaitListDemand {
         this.id = id;
     }
 
-    public String getWaitListDate() {
+    public LocalDate getWaitListDate() {
         return waitListDate;
     }
 
-    public void setWaitListDate(String waitListDate) {
+    public void setWaitListDate(LocalDate waitListDate) {
         this.waitListDate = waitListDate;
     }
 
@@ -58,5 +62,21 @@ public class WaitListDemand {
 
     public void setBook(Book book) {
         this.book = book;
+    }
+
+    public LocalDate getFirstReturnDate() {
+        return firstReturnDate;
+    }
+
+    public void setFirstReturnDate(LocalDate firstReturnDate) {
+        this.firstReturnDate = firstReturnDate;
+    }
+
+    public LocalDate getContactDate() {
+        return contactDate;
+    }
+
+    public void setContactDate(LocalDate contactDate) {
+        this.contactDate = contactDate;
     }
 }

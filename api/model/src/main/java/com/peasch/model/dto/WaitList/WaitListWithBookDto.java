@@ -6,16 +6,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class WaitListWithBookDto extends WaitListDto  {
-    private Set<BookDto> books = new HashSet<>();
+    private BookDto book;
 
     public WaitListWithBookDto() {
     }
 
-    public Set<BookDto> getBooks() {
-        return books;
+    public BookDto getBook() {
+        return book;
     }
 
-    public void setBooks(Set<BookDto> books) {
-        this.books = books;
+    public void setBook(BookDto book) {
+        this.book = book;
     }
 }
