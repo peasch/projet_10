@@ -1,0 +1,10 @@
+
+r	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(­ÔèÃúÿÿÿÿ
+A
+java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX
+X
+java:S1128"DRemove this unused import 'com.googlecode.jmapper.annotations.JMap'.(èÒ„Ë
+T
+java:S1128";Remove this unused import 'com.peasch.model.entities.Role'.(­—’Äÿÿÿÿÿ
+•
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(šªÀÔ

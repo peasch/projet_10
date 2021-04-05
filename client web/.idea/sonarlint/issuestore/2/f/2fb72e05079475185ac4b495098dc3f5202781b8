@@ -1,0 +1,17 @@
+
+O
+java:S1068"6Remove this unused "signingKeyResolver" private field.(È³×•ûÿÿÿÿ
+_
+java:S1192"FDefine a constant instead of duplicating this literal "token" 4 times.(©íàþøÿÿÿÿ
+j
+java:S1192"JDefine a constant instead of duplicating this literal "localDate" 4 times.(’¦Ú´ÿÿÿÿÿ8‡”Õ‰å.
+J
+java:S1068"6Remove this unused "signatureAlgorithm" private field.(ƒ ´»
+r	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ§¶ºüÿÿÿÿ
+R
+java:S2441">Make "UserBean" serializable or don't store it in the session.(®êøÏ
+a	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó®Ü›
+_
+java:S1192"FDefine a constant instead of duplicating this literal "index" 3 times.(¦œû×ÿÿÿÿÿ
+k
+java:S1192"KDefine a constant instead of duplicating this literal "borrowings" 3 times.(±Ó¼ìûÿÿÿÿ8°Ý¼ºˆ/

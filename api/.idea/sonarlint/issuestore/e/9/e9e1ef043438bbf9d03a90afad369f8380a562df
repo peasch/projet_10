@@ -1,0 +1,16 @@
+
+W
+java:S1126="AReplace this if-then-else statement by a single return statement.(ÔÖ«ò
+b
+java:S1128"ERemove this unused import 'com.peasch.model.dto.Book.BookWithAllDTO'.(ŒÆŒ€8£Ÿ›Éˆ/
+k	java:S117<"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôþÉœùÿÿÿÿ
+]	java:S125O"<This block of commented-out lines of code should be removed.(“Æêëøÿÿÿÿ8Èý›Éˆ/
+W
+java:S1126Z"AReplace this if-then-else statement by a single return statement.(Œ€²ß
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶þÿÿÿÿ
+W
+java:S1126E"AReplace this if-then-else statement by a single return statement.(ˆ¦žÅ
+U
+java:S1128"8Remove this unused import 'javassist.NotFoundException'.(Šæ¶™8¦¼å¼ˆ/
+T
+java:S1128"7Remove this unused import 'org.aspectj.weaver.ast.Not'.(Ù§¸þ8¼ìà¼ˆ/

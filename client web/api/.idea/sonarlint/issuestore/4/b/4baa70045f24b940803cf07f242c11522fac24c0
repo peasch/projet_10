@@ -1,0 +1,8 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿•”Ø˙ˇˇˇˇ
+S
+java:S1128">Remove this unused import 'com.peasch.model.dto.User.UserDto'.(áø≈}
+U
+java:S1128"@Remove this unused import 'com.peasch.model.dto.copies.CopyDto'.( …Ù&
+ñ
+java:S1186"ÄAdd a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(œµŸ.
