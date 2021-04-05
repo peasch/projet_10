@@ -73,7 +73,7 @@ public class WaitListServiceImpl implements WaitListService {
     public WaitListWithAllDto save(UserDto user, Integer id) {
         BookWithoutCopiesDTO book = bookService.findById(id);
         WaitListWithAllDto waitListWithAllDto = new WaitListWithAllDto();
-        waitListWithAllDto.setBook(book);
+        /*waitListWithAllDto.setBook(book);*/
         waitListWithAllDto.setUser(user);
         waitListWithAllDto.setWaitListDate(LocalDate.now());
         waitListWithAllDto.setFirstReturnDate(borrowingService.findBorrowingsByBookId(book.getId()));
@@ -91,28 +91,37 @@ public class WaitListServiceImpl implements WaitListService {
         }
     }
 
-
-
-
     public void deleteWaitlistDemand(Integer id) {
         WaitListDemand waitListDemand = waitListDao.findWaitListDemandById(id);
         waitListDao.delete(waitListDemand);
     }
 
-    public void availableBookofWaitLists(Integer id) {
+    public WaitListWithAllDto availableBookofWaitLists(Integer id) {
         LocalDate today = LocalDate.now();
         List<WaitListWithAllDto> waitLists = this.waitListByBookId(id);
-        WaitListWithAllDto firstWaitLister = waitLists.get(0);
-        if (firstWaitLister.getContactDate() == null) {
-            firstWaitLister.setContactDate(today);
-        } else if (firstWaitLister.getContactDate().plusDays(2).compareTo(today) < 0) {
-            this.deleteWaitlistDemand(firstWaitLister.getId());
-            waitLists = this.waitListByBookId(id);
-            firstWaitLister = waitLists.get(0);
-            firstWaitLister.setContactDate(today);
+        if (waitLists != null) {
+            WaitListWithAllDto firstWaitLister = waitLists.get(0);
+            if (firstWaitLister.getContactDate() == null) {
+                firstWaitLister.setContactDate(today);
+                this.update(firstWaitLister);
+            } else if (firstWaitLister.getContactDate().plusDays(2).compareTo(today) < 0) {
+                this.deleteWaitlistDemand(firstWaitLister.getId());
+                waitLists = this.waitListByBookId(id);
+                firstWaitLister = waitLists.get(0);
+                firstWaitLister.setContactDate(today);
+                this.update(firstWaitLister);
+            }
+            return firstWaitLister;
+        } else {
+            return null;
         }
 
     }
+    public WaitListWithAllDto update(WaitListWithAllDto waitListWithAllDto) {
+
+        return dtoToWaitListMapper.getDestination(waitListDao.save(wLToDtoMapper.getDestination(waitListWithAllDto)));
+    }
+
 
 
 }

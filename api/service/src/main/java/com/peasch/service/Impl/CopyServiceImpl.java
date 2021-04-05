@@ -29,11 +29,8 @@ public class CopyServiceImpl implements CopyService {
     private JMapper<CopyDto, Copy> copyJMapper;
 
     @Autowired
-    private JMapper<Copy, CopyDto>  dtoToCopyMapper;
-    @Autowired
     private JMapper<CopyWithALLDTO, Copy> copyWithAllToDTOMapper;
-    @Autowired
-    private JMapper<BookDto, Book>  bookToDTOMapper;
+
     @Autowired
     private JMapper<BookWithoutCopiesDTO, Book>  bookWithoutCopiesDTOBookJMapper;
     @Autowired

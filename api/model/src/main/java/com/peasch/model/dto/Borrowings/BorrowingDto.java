@@ -1,17 +1,17 @@
 package com.peasch.model.dto.Borrowings;
 
 import com.googlecode.jmapper.annotations.JGlobalMap;
-import com.peasch.model.dto.User.UserDto;
-import com.peasch.model.dto.copies.CopyDto;
+
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @JGlobalMap
 public class BorrowingDto implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
-    private String borrowingDate;
-    private String returnDate;
+    private LocalDate borrowingDate;
+    private LocalDate returnDate;
     private boolean extended;
     private Boolean returned;
 
@@ -27,19 +27,19 @@ public class BorrowingDto implements Serializable {
         this.id = id;
     }
 
-    public String getBorrowingDate() {
+    public LocalDate getBorrowingDate() {
         return borrowingDate;
     }
 
-    public void setBorrowingDate(String borrowingDate) {
+    public void setBorrowingDate(LocalDate borrowingDate) {
         this.borrowingDate = borrowingDate;
     }
 
-    public String getReturnDate() {
+    public LocalDate getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(String returnDate) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
 

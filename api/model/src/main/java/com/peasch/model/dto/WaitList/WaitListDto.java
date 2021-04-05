@@ -48,4 +48,6 @@ public class WaitListDto {
     public void setContactDate(LocalDate contactDate) {
         this.contactDate = contactDate;
     }
+
+
 }

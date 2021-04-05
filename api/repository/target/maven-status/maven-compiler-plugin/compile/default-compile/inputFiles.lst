@@ -1,16 +1,18 @@
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\RoleDaoImpl.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\CopyDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\UserDaoImpl.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\UserDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\CategoryDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\BookDaoImpl.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\LibraryDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\BookDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\AuthorDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\CategoryDaoImpl.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\LibraryDaoImpl.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\RoleDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\BorrowingDao.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\BorrowingDaoImpl.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\CopydaoImpl.java
-J:\docs divers\library-management-system\repository\src\main\java\com\peasch\repository\dao\Impl\AuthorDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\CopyDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\CategoryDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\UserDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\LibraryDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\LibraryDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\RoleDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\WaitListDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\RoleDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\CategoryDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\UserDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\WaitListDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\BorrowingDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\AuthorDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\BookDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\BookDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\AuthorDao.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\BorrowingDaoImpl.java
+C:\Users\peasc\projet_10\api\repository\src\main\java\com\peasch\repository\dao\Impl\CopydaoImpl.java

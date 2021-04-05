@@ -29,34 +29,37 @@ public class ScheduledTasks {
     private static final String BATCHPWD = "batch";
 
     @Scheduled(fixedDelay = 4000)
-    /*  @Scheduled(cron="0 0 11 * * *")*/
     public void scheduled() {
         UserBean batchUser = new UserBean();
         batchUser.setUserName(BATCH);
         batchUser.setPassword(BATCHPWD);
-        Set<BorrowingBean> borrowings = batchProxy.findAllTooLateBorrowings(batchProxy.login(batchUser));
+        String token = "bearer " + batchProxy.login(batchUser);
+        Set<BorrowingBean> borrowings = batchProxy.findAllTooLateBorrowings(token);
         for (BorrowingBean borrowingBean : borrowings) {
             /*emailService.send(borrowingBean.getUser().getEmail(), "NE PAS REPONDRE retard", "votre livre est en retard, pensez à le rendre, ou à prolonger la durée si vous le pouvez.");*/
-            System.out.println(borrowingBean.getUser().getEmail());
+//            System.out.println(borrowingBean.getUser().getEmail());
         }
     }
 
-   /* @Scheduled(fixedDelay = 60000)
+    @Scheduled(fixedDelay = 180000)
     public void waitListChecking() {
         UserBean batchUser = new UserBean();
         LocalDate now = LocalDate.now();
         batchUser.setUserName(BATCH);
         batchUser.setPassword(BATCHPWD);
-        String token = batchProxy.login(batchUser);
+        String token = "bearer " + batchProxy.login(batchUser);
         List<BookBean> books = batchProxy.checkAvailableBooks(token);
         for (BookBean book : books) {
             if (batchProxy.isWaitListed(book.getId(), token)) {
                 WaitListBean waitListBean = batchProxy.checkWaitListOfBook(book.getId(), token);
-                if (waitListBean.getContactDate() != now) {
+                if (waitListBean.getContactDate().equals(now)) {
 //                    emailService.send(waitListBean.getUser().getEmail(), "Livre disponible", "Le livre que vous avez réservé est disponible, vous avez 48h pour venir le récupérer");
                     System.out.println(waitListBean.getUser().getEmail());
+                }else{
+
                 }
             }
         }
-    }*/
+    }
 }
+

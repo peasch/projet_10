@@ -3,6 +3,7 @@ package com.peasch.controller;
 import com.peasch.controller.security.config.JwtTokenProvider;
 import com.peasch.model.dto.User.UserDto;
 import com.peasch.model.dto.WaitList.WaitListWithAllDto;
+import com.peasch.service.BookService;
 import com.peasch.service.UserService;
 import com.peasch.service.WaitListService;
 import javassist.NotFoundException;
@@ -21,6 +22,8 @@ public class WaitListController {
     WaitListService service;
     @Autowired
     UserService userService;
+    @Autowired
+    BookService bookService;
 
     @GetMapping("/add/{id}")
     public void addUserToWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token){
@@ -64,5 +67,14 @@ public class WaitListController {
     @GetMapping("/delete/{id}")
     public void deleteWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
         service.deleteWaitlistDemand(id);
+    }
+    @GetMapping("/waitListed/{id}")
+    public boolean isWaitListed(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token){
+        return service.isWaitListed(id);
+    }
+
+    @GetMapping("/checkWaitList/{id}")
+    public WaitListWithAllDto checkWaitListOfBook(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token)  {
+       return service.availableBookofWaitLists(id);
     }
 }

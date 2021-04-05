@@ -1,6 +1,8 @@
 com\peasch\model\dto\copies\CopyWithBookDTO.class
+com\peasch\model\dto\WaitList\WaitListWithBookDto.class
 com\peasch\model\dto\Borrowings\BorrowingLateDTO.class
 com\peasch\model\dto\User\AuthBody.class
+com\peasch\model\dto\WaitList\WaitListWithAllDto.class
 com\peasch\model\entities\Copy.class
 com\peasch\model\entities\Library.class
 com\peasch\model\entities\Borrowing.class
@@ -15,6 +17,7 @@ com\peasch\model\dto\User\UserWithBorrowingsDTO.class
 com\peasch\model\dto\Categories\CategoryDto.class
 com\peasch\model\dto\libraries\LibraryWithCopiesDTO.class
 com\peasch\model\dto\User\UserDto.class
+com\peasch\model\dto\WaitList\WAitListWithUserDto.class
 com\peasch\model\entities\Research.class
 com\peasch\model\dto\Author\AuthorDto.class
 com\peasch\model\dto\Author\AuthorWithBooksDTO.class
@@ -29,7 +32,9 @@ com\peasch\model\dto\Book\BookWithCategoryDTO.class
 com\peasch\model\dto\User\UserWithRoleDTO.class
 com\peasch\model\dto\Borrowings\BorrowingWithCopyAndUserDto.class
 com\peasch\model\dto\copies\CopyWithALLDTO.class
+com\peasch\model\dto\WaitList\WaitListDto.class
 com\peasch\model\entities\User.class
+com\peasch\model\entities\WaitListDemand.class
 com\peasch\model\entities\Role.class
 com\peasch\model\dto\Role\RoleDto.class
 com\peasch\model\entities\Category.class

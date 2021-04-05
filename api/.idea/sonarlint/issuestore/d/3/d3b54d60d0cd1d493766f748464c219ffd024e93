@@ -1,6 +1,6 @@
 
-š
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğœüÿÿÿÿ
-r	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(À¥Ó¯úÿÿÿÿ
-S
-java:S1128"@Remove this unused import 'com.peasch.model.dto.copies.CopyDto'.(ÊÉô&
+U
+java:S1128"@Remove this unused import 'com.peasch.model.dto.copies.CopyDto'.(ÊÉô&
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğœüÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(À¥Ó¯úÿÿÿÿ

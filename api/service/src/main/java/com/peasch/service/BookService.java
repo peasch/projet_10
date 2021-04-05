@@ -1,6 +1,7 @@
 package com.peasch.service;
 
 import com.peasch.model.dto.Book.BookDto;
+import com.peasch.model.dto.Book.BookWithAllDTO;
 import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
 import com.peasch.model.entities.Book;
 import com.peasch.model.entities.Research;
@@ -14,9 +15,11 @@ public interface BookService {
     BookWithoutCopiesDTO findById(Integer id);
 
     Book save(Book book);
-
-    /*List<BookDto> findBooksByAuthor_Name(String author);
-    List<BookDto> findBooksByTitle(String title);*/
     List<BookWithoutCopiesDTO> findBooksByResearch(Research research);
+    Book checkAvailabilityOfBook(Book book);
+    List<BookWithoutCopiesDTO> getBooksAvailable();
+    List<BookWithoutCopiesDTO> getBooksAvailableAndWaitListed();
+    /*BookWithAllDTO findByIdWithAll(Integer id);*/
+    Boolean checkBookAvailable(int bookId);
 
 }

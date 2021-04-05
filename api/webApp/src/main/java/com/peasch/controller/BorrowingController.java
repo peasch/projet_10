@@ -57,6 +57,7 @@ public class BorrowingController {
         UserDto employee = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
         return service.returnBorrowing(id,employee);
     }
+
     @GetMapping("rentable/{id}")
     public Boolean rentableBook (@PathVariable(value="id")Integer bookId,@RequestHeader(name = "Authorization") String token){
         UserDto user = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));

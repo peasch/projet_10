@@ -2,6 +2,7 @@ com\peasch\controller\BookController.class
 com\peasch\controller\AuthorController.class
 com\peasch\controller\UserController.class
 com\peasch\controller\CategoryController.class
+com\peasch\controller\WaitListController.class
 com\peasch\controller\security\config\JwtConfigurer.class
 com\peasch\controller\LibraryController.class
 com\peasch\controller\security\config\CustomUserSecurity.class

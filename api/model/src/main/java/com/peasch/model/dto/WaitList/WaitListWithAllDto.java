@@ -1,6 +1,7 @@
 package com.peasch.model.dto.WaitList;
 
 import com.peasch.model.dto.Book.BookDto;
+import com.peasch.model.dto.Book.BookWithAllDTO;
 import com.peasch.model.dto.Book.BookWithAuthorDTO;
 import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
 import com.peasch.model.dto.User.UserDto;

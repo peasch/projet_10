@@ -26,7 +26,6 @@ public class UserController {
     @GetMapping("/user/{id}")
     public UserDto getUserById(@PathVariable(value = "id") Integer id) {
         UserDto userDto = service.findById(id);
-
         return userDto;
     }
 
