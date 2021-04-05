@@ -6,6 +6,7 @@ public class WaitListBean {
     private int id;
     private LocalDate waitListDate;
     private LocalDate firstReturnDate;
+    private LocalDate contactDate;
     private UserBean user;
     private BookBean book;
 
@@ -50,5 +51,13 @@ public class WaitListBean {
 
     public void setFirstReturnDate(LocalDate firstReturnDate) {
         this.firstReturnDate = firstReturnDate;
+    }
+
+    public LocalDate getContactDate() {
+        return contactDate;
+    }
+
+    public void setContactDate(LocalDate contactDate) {
+        this.contactDate = contactDate;
     }
 }

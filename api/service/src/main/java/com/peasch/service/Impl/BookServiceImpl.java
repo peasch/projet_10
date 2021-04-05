@@ -1,18 +1,12 @@
 package com.peasch.service.Impl;
 
 import com.googlecode.jmapper.JMapper;
-import com.peasch.model.dto.Author.AuthorDto;
 import com.peasch.model.dto.Book.BookDto;
-import com.peasch.model.dto.Book.BookWithAllDTO;
 import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
-import com.peasch.model.dto.Categories.CategoryDto;
-import com.peasch.model.dto.copies.CopyDto;
-import com.peasch.model.entities.*;
+import com.peasch.model.entities.Book;
+import com.peasch.model.entities.Research;
 import com.peasch.repository.dao.BookDao;
-import com.peasch.service.AuthorService;
-import com.peasch.service.BookService;
-import com.peasch.service.CategoryService;
-import com.peasch.service.CopyService;
+import com.peasch.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,9 +19,7 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookDao bookDao;
     @Autowired
-    private JMapper<BookDto,Book> bookJMapper;
-    @Autowired
-    private JMapper<AuthorDto, Author> authorJMapper;
+    private JMapper<BookDto, Book> bookJMapper;
     @Autowired
     private CopyService copyService;
     @Autowired
@@ -35,47 +27,49 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private CategoryService categoryService;
     @Autowired
-    private JMapper<BookWithoutCopiesDTO, Book>  bookWithoutCopiesDTOBookJMapper;
-    @Autowired
-    private JMapper<CategoryDto, Category> categoryToDTOMapper;
+    private JMapper<BookWithoutCopiesDTO, Book> bookWithoutCopiesDTOBookJMapper;
 
+
+    @Autowired
+    private WaitListService waitListService;
 
     public List<BookDto> getBooks() {
         List<Book> books = bookDao.findAll();
-        return books.stream().map(x-> bookJMapper.getDestination(x)).collect(Collectors.toList());
+        return books.stream().map(x -> bookJMapper.getDestination(x)).collect(Collectors.toList());
+    }
+
+    public List<BookWithoutCopiesDTO> getBooksAvailable() {
+        List<Book> books = bookDao.findAll();
+        List<BookWithoutCopiesDTO> booksWoCopies = new ArrayList<>();
+        for (Book book : books) {
+            if (this.checkBookAvailable(book.getId())) {
+                booksWoCopies.add(bookWithoutCopiesDTOBookJMapper.getDestination(book));
+            }
+        }
+        return booksWoCopies;
     }
 
     public BookWithoutCopiesDTO findById(Integer id) {
         Book book = bookDao.findById(id).get();
-        BookWithoutCopiesDTO bookDto =  bookWithoutCopiesDTOBookJMapper.getDestination(book);
+        BookWithoutCopiesDTO bookDto = bookWithoutCopiesDTOBookJMapper.getDestination(book);
         bookDto.setAuthor(authorService.findById(book.getAuthor().getId()));
         bookDto.setCategory(categoryService.findById(book.getCategory().getId()));
         return bookDto;
     }
-
+    /*public BookWithAllDTO findByIdWithAll(Integer id) {
+        Book book = bookDao.findById(id).get();
+        BookWithAllDTO bookDto = bookToDTOwithAllMapper.getDestination(book);
+        bookDto.setAuthor(authorService.findById(book.getAuthor().getId()));
+        bookDto.setCategory(categoryService.findById(book.getCategory().getId()));
+        bookDto.setCopiesOfBook(copyService.findCopiesByBook_Id(book.getId()));
+        return bookDto;
+    }*/
 
 
     public Book save(Book book) {
         return bookDao.save(book);
     }
 
-    /*public List<BookDto> findBooksByAuthor_Name(String authorName) {
-        List<BookDto> bookDtoSearched = new ArrayList<>();
-        List<Book> bookSearched = bookDao.findBooksByAuthor_NameLike("%" + authorName + "%");
-        for (Book book : bookSearched) {
-            bookDtoSearched.add(mapper.fromBookToDto(book));
-        }
-        return bookDtoSearched;
-    }*/
-
-    /*public List<BookDto> findBooksByTitle(String title) {
-        List<BookDto> booksDtoSearched = new ArrayList<>();
-        List<Book> bookSearched = bookDao.findBooksByTitleLike("%" + title + "%");
-        for (Book book : bookSearched) {
-            booksDtoSearched.add(mapper.fromBookToDto(book));
-        }
-        return booksDtoSearched;
-    }*/
 
     public List<BookWithoutCopiesDTO> findBooksByResearch(Research research) {
         List<BookWithoutCopiesDTO> booksDtoResearched = new ArrayList<>();
@@ -87,4 +81,32 @@ public class BookServiceImpl implements BookService {
         return booksDtoResearched;
     }
 
+    public Book checkAvailabilityOfBook(Book book) {
+        if (copyService.findNumberOfCopiesAvailable(book.getId()) > 0) {
+            book.setAvailable(true);
+
+        } else {
+            book.setAvailable(false);
+        }
+
+        return book;
+    }
+
+    public Boolean checkBookAvailable(int bookId) {
+        BookDto book = this.findById(bookId);
+        return book.getAvailable();
+
+    }
+
+    public List<BookWithoutCopiesDTO> getBooksAvailableAndWaitListed() {
+        List<Book> books = bookDao.findAll();
+        List<BookWithoutCopiesDTO> booksWoCopies = new ArrayList<>();
+        for (Book book : books) {
+            book = this.checkAvailabilityOfBook(book);
+            if (waitListService.isWaitListed(book.getId()) && book.getAvailable()) {
+                booksWoCopies.add(bookWithoutCopiesDTOBookJMapper.getDestination(book));
+            }
+        }
+        return booksWoCopies;
+    }
 }

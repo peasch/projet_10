@@ -1,10 +1,17 @@
 
-[
-java:S1128"ERemove this unused import 'com.peasch.model.dto.Book.BookWithAllDTO'.(ŒÆŒ€
-V	java:S125F"<This block of commented-out lines of code should be removed.(¶Ý‰Šÿÿÿÿÿ
-P	java:S125="<This block of commented-out lines of code should be removed.(Í‘¼e
-R
-java:S36551"7Call "Optional#isPresent()" before accessing the value.(îÁ¡¾úÿÿÿÿ
+Y
+java:S3655;"7Call "Optional#isPresent()" before accessing the value.(îÁ¡¾úÿÿÿÿ8ûÚïÈˆ/
+e
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Þ8ýˆúÈˆ/
+_
+java:S1126["BReplace this if-then-else statement by a single method invocation.(§ñâÜ8ûÚïÈˆ/
+e
+java:S1128"HRemove this unused import 'com.peasch.model.dto.Categories.CategoryDto'.(É¹Ž„8·þ±Éˆ/
+\
+java:S1128"?Remove this unused import 'com.peasch.model.entities.Category'.(‹Ò†Á8·þ±Éˆ/
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶þÿÿÿÿ
-U
-java:S1128	"@Remove this unused import 'com.peasch.model.dto.copies.CopyDto'.(ÊÉô&
+]	java:S125A"<This block of commented-out lines of code should be removed.(ø³’’øÿÿÿÿ8ì·§Éˆ/
+_
+java:S1128	"=Remove this unused import 'com.peasch.model.entities.Author'.(¯´©äüÿÿÿÿ8è”²Éˆ/
+d
+java:S1128"BRemove this unused import 'com.peasch.model.dto.Author.AuthorDto'.(‰Áš–üÿÿÿÿ8è”²Éˆ/

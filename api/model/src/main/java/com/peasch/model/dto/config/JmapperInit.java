@@ -166,7 +166,7 @@ public class JmapperInit {
 
     @Bean
     JMapper<WaitListWithAllDto, WaitListDemand> waitListToDTOMapper() {
-        return new JMapper<>(WaitListWithAllDto.class,WaitListDemand.class);
+        return new JMapper<>(WaitListWithAllDto.class, WaitListDemand.class);
     }
 
     @Bean

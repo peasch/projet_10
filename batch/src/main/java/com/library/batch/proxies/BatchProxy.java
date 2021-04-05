@@ -26,10 +26,15 @@ public interface BatchProxy {
     @GetMapping("/books/availables")
     List<BookBean> checkAvailableBooks(@RequestHeader(name = "Authorization") String token);
 
-    @GetMapping("/waitList/checkWaitList")
+    @GetMapping("/books/availablesAndWaitList")
+   List<BookBean> checkAvailableBooksAndWaitList( @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/checkWaitList/{id}")
     WaitListBean checkWaitListOfBook(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
 
 //====================== WaitList =================================
-    @GetMapping("/waitList/waitListed")
+    @GetMapping("/waitList/waitListed/{id}")
      boolean isWaitListed(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
+
+
 }

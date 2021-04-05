@@ -22,6 +22,7 @@ public class BookController {
 
     @GetMapping
     public List<BookDto> getBooks( @RequestHeader(name = "Authorization") String token){
+        List<BookWithoutCopiesDTO> books = service.getBooksAvailable();
         return service.getBooks();
     }
 
@@ -41,7 +42,16 @@ public class BookController {
 
     }
 
+    @GetMapping("availables")
+    public List<BookWithoutCopiesDTO> checkAvailableBooks( @RequestHeader(name = "Authorization") String token){
 
+        return service.getBooksAvailable();
+    }
 
+    @GetMapping("availablesAndWaitList")
+    public List<BookWithoutCopiesDTO> checkAvailableBooksAndWaitList( @RequestHeader(name = "Authorization") String token){
+
+        return service.getBooksAvailableAndWaitListed();
+    }
 
 }

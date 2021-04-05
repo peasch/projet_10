@@ -1,6 +1,6 @@
 
-g
-java:S1128"GRemove this unused import 'com.peasch.model.dto.copies.CopyWithALLDTO'.(Ê¥şÿÿÿÿÿ8¾¾·å.
-¡
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½²ªûÿÿÿÿ8¦‚¹å.
-r	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(À¥Ó¯úÿÿÿÿ
+i
+java:S1128"GRemove this unused import 'com.peasch.model.dto.copies.CopyWithALLDTO'.(Ê¥şÿÿÿÿÿ8¾¾·å.
+£
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(½²ªûÿÿÿÿ8¦‚¹å.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(À¥Ó¯úÿÿÿÿ

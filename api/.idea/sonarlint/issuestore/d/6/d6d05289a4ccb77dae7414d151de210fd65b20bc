@@ -1,6 +1,6 @@
 
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶þÿÿÿÿ
-V
-java:S1128";Remove this unused import 'com.peasch.model.entities.User'.(äØþ”þÿÿÿÿ
 S
 java:S1128">Remove this unused import 'com.peasch.model.dto.User.UserDto'.(‡¿Å}
+V
+java:S1128";Remove this unused import 'com.peasch.model.entities.User'.(äØþ”þÿÿÿÿ

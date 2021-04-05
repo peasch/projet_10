@@ -1,0 +1,6 @@
+
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¢ÎÈ
+T
+java:S1128">Remove this unused import 'com.peasch.model.entities.Library'.(³…êí

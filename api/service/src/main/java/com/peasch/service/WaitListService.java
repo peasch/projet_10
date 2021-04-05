@@ -18,5 +18,5 @@ public interface WaitListService {
     WaitListWithAllDto getWaitListOfUser(Integer bookId, UserDto user);
     List<WaitListWithAllDto> getAllWaitListofuser(UserDto user);
     Boolean isWaitListed(Integer bookId);
-    void availableBookofWaitLists(Integer id);
+    WaitListWithAllDto availableBookofWaitLists(Integer id);
 }

@@ -1,8 +1,5 @@
 package com.peasch.model.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
-
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,6 +18,8 @@ public class Book {
     private String summary;
     @Column(name="cover")
     private String cover;
+    @Column(name="available")
+    private Boolean available;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_category")
@@ -101,5 +100,13 @@ public class Book {
 
     public void setCopiesOfBook(Set<Copy> copiesOfBook) {
         this.copiesOfBook = copiesOfBook;
+    }
+
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
     }
 }

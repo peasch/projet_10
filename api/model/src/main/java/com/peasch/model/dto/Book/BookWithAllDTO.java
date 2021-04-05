@@ -4,13 +4,15 @@ import com.peasch.model.dto.Author.AuthorDto;
 import com.peasch.model.dto.Categories.CategoryDto;
 import com.peasch.model.dto.copies.CopyDto;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class BookWithAllDTO extends BookDto {
     private AuthorDto author;
     private CategoryDto category;
-    private Set<CopyDto> copiesOfBook = new HashSet<>();
+    private List<CopyDto> copiesOfBook = new ArrayList<>();
 
     public BookWithAllDTO() {
     }
@@ -31,11 +33,11 @@ public class BookWithAllDTO extends BookDto {
         this.category = category;
     }
 
-    public Set<CopyDto> getCopiesOfBook() {
+    public List<CopyDto> getCopiesOfBook() {
         return copiesOfBook;
     }
 
-    public void setCopiesOfBook(Set<CopyDto> copiesOfBook) {
+    public void setCopiesOfBook(List<CopyDto> copiesOfBook) {
         this.copiesOfBook = copiesOfBook;
     }
 }

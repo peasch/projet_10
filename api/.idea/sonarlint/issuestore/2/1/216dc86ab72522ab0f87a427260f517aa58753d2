@@ -1,28 +1,24 @@
 
->
-java:S1481H"(Remove this unused "sdf" local variable.(É¹ºı
-^
-java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş
-
-java:S1488@"dImmediately return this expression instead of assigning it to the temporary variable "borrowingDto".(Ú‘ÒÖıÿÿÿÿ
-V
-java:S1128";Remove this unused import 'com.peasch.model.entities.User'.(äØş”şÿÿÿÿ
-T
-java:S3655f"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
-T
-java:S3655E"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
-Y
-java:S3655@"7Call "Optional#isPresent()" before accessing the value.(Ú‘ÒÖıÿÿÿÿ8¬®áóì.
-U
-java:S3655…"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
-V
-java:S1128";Remove this unused import 'com.peasch.service.UserService'.(éÜ¼åúÿÿÿÿ
-K
-java:S1128"5Remove this unused import 'java.text.ParseException'.(ñ®ï•
-G
-java:S1128"1Remove this unused import 'java.text.DateFormat'.(÷Œá¼
-S	java:S106x"9Replace this use of System.out or System.err by a logger.(Ùğóşÿÿÿÿ
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ
+T
+java:S3655w"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
+U
+java:S3655›"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
+T
+java:S3655C"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
+^
+java:S1854d"<Remove this useless assignment to local variable "idBorrow".(÷±¬Øıÿÿÿÿ8ìúŒÆˆ/
 M
-java:S1854H"7Remove this useless assignment to local variable "sdf".(É¹ºı
-N	java:S106z"9Replace this use of System.out or System.err by a logger.(²¨ç÷
+java:S5411£"*Use the primitive boolean expression here.(¥¾½“ùÿÿÿÿ8§üıÃˆ/
+S
+java:S3655="7Call "Optional#isPresent()" before accessing the value.(çÈ8¬®áóì.
+U
+java:S3655‚"7Call "Optional#isPresent()" before accessing the value.(²‹É8ˆôèÆˆ/
+L
+java:S1481·".Remove this unused "firstDate" local variable.(å¶¡8§üıÃˆ/
+T
+java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ8ìúŒÆˆ/
+O
+java:S1481d"-Remove this unused "idBorrow" local variable.(÷±¬Øıÿÿÿÿ8ìúŒÆˆ/
+]
+java:S1128";Remove this unused import 'com.peasch.service.BookService'.(±ûøÿÿÿÿ8ö²Éˆ/

@@ -1,15 +1,18 @@
 package com.library.batch.Beans;
 
+import java.time.LocalDate;
+
 public class BorrowingBean {
-    private static final long serialVersionUID = 1L;
+
     private int id;
-    private String borrowingDate;
-    private String returnDate;
-    private boolean extended;
+    private LocalDate borrowingDate;
+    private LocalDate returnDate;
+    private Boolean extended;
+    private Boolean returned;
     private UserBean user;
     private CopyBean copy;
-    private Boolean returned;
-    private Integer daysToGo;
+
+
 
     public BorrowingBean() {
     }
@@ -24,19 +27,19 @@ public class BorrowingBean {
         this.id = id;
     }
 
-    public String getBorrowingDate() {
+    public LocalDate getBorrowingDate() {
         return borrowingDate;
     }
 
-    public void setBorrowingDate(String borrowingDate) {
+    public void setBorrowingDate(LocalDate borrowingDate) {
         this.borrowingDate = borrowingDate;
     }
 
-    public String getReturnDate() {
+    public LocalDate getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(String returnDate) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
 
@@ -72,11 +75,12 @@ public class BorrowingBean {
         this.returned = returned;
     }
 
-    public Integer getDaysToGo() {
-        return daysToGo;
+    public Boolean getExtended() {
+        return extended;
     }
 
-    public void setDaysToGo(Integer daysToGo) {
-        this.daysToGo = daysToGo;
+    public void setExtended(Boolean extended) {
+        this.extended = extended;
     }
+
 }

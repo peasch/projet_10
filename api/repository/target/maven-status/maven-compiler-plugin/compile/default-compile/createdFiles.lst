@@ -4,6 +4,7 @@ com\peasch\repository\dao\Impl\LibraryDaoImpl.class
 com\peasch\repository\dao\Impl\CategoryDaoImpl.class
 com\peasch\repository\dao\Impl\RoleDaoImpl.class
 com\peasch\repository\dao\Impl\BorrowingDaoImpl.class
+com\peasch\repository\dao\WaitListDao.class
 com\peasch\repository\dao\UserDao.class
 com\peasch\repository\dao\CategoryDao.class
 com\peasch\repository\dao\Impl\AuthorDaoImpl.class
@@ -14,3 +15,4 @@ com\peasch\repository\dao\Impl\CopydaoImpl.class
 com\peasch\repository\dao\Impl\UserDaoImpl.class
 com\peasch\repository\dao\LibraryDao.class
 com\peasch\repository\dao\Impl\BookDaoImpl.class
+com\peasch\repository\dao\Impl\WaitListDaoImpl.class

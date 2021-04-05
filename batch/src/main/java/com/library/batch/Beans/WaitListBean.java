@@ -3,7 +3,7 @@ package com.library.batch.Beans;
 import java.time.LocalDate;
 
 public class WaitListBean {
-
+    private static final long serialVersionUID = 1L;
     private int id;
     private LocalDate waitListDate;
     private LocalDate firstReturnDate;

@@ -9,7 +9,7 @@ public class BookDto implements Serializable {
     private int id;
     private String title;
     private String summary;
-
+    private Boolean available;
 
     private String cover;
 
@@ -50,7 +50,11 @@ public class BookDto implements Serializable {
         this.summary = summary;
     }
 
+    public Boolean getAvailable() {
+        return available;
+    }
 
-
-
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
 }

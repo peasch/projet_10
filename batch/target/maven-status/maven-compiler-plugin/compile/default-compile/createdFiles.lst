@@ -1,0 +1,14 @@
+com\library\batch\Beans\UserConnected.class
+com\library\batch\BatchApplication.class
+com\library\batch\mails\Email.class
+com\library\batch\Beans\AuthorBean.class
+com\library\batch\Beans\Research.class
+com\library\batch\Beans\BorrowingBean.class
+com\library\batch\Beans\BookBean.class
+com\library\batch\Beans\CopyBean.class
+com\library\batch\Beans\UserBean.class
+com\library\batch\proxies\BatchProxy.class
+com\library\batch\service\ScheduledTasks.class
+com\library\batch\Beans\CategoryBean.class
+com\library\batch\Beans\LibraryBean.class
+com\library\batch\mails\EmailService.class

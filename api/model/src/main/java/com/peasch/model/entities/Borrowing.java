@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name="borrowing")
@@ -14,9 +15,9 @@ public class Borrowing {
     @Column(name = "id")
     private int id;
     @Column(name="borrowing_date")
-    private String borrowingDate;
+    private LocalDate borrowingDate;
     @Column(name="returnDate")
-    private String returnDate;
+    private LocalDate returnDate;
     @Column(name="extended")
     private boolean extended;
     @Column(name="returned")
@@ -56,19 +57,19 @@ public class Borrowing {
         this.id = id;
     }
 
-    public String getBorrowingDate() {
+    public LocalDate getBorrowingDate() {
         return borrowingDate;
     }
 
-    public void setBorrowingDate(String borrowingDate) {
+    public void setBorrowingDate(LocalDate borrowingDate) {
         this.borrowingDate = borrowingDate;
     }
 
-    public String getReturnDate() {
+    public LocalDate getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(String returnDate) {
+    public void setReturnDate(LocalDate returnDate) {
         this.returnDate = returnDate;
     }
 

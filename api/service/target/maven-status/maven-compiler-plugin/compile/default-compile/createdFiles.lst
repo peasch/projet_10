@@ -6,11 +6,13 @@ com\peasch\service\Impl\BookServiceImpl.class
 com\peasch\service\Impl\RoleServiceImpl.class
 com\peasch\service\RoleService.class
 com\peasch\service\Impl\CopyServiceImpl.class
+com\peasch\service\Impl\WaitListServiceImpl.class
 com\peasch\service\Impl\BorrowingServiceImpl.class
 com\peasch\service\BorrowingService.class
 com\peasch\service\AuthorService.class
 com\peasch\service\LibraryService.class
 com\peasch\service\UserService.class
+com\peasch\service\WaitListService.class
 com\peasch\service\BookService.class
 com\peasch\service\Impl\AuthorServiceImpl.class
 com\peasch\service\Impl\CategoryServiceImpl.class

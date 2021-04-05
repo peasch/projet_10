@@ -33,8 +33,7 @@ public class UserServiceImpl implements UserService {
     private JMapper<User, UserDto>  dtoToUserMapper;
     @Autowired
     private JMapper<RoleDto, Role> roleToDTOMapper;
-    @Autowired
-    private JMapper<BorrowingWithAllDTO, Borrowing> borrowingWithAllToDTOMapper;
+
     @Autowired
     private JMapper<UserWithAllDTO, User>  userWithAllToDTOMapper;
     @Autowired
@@ -44,8 +43,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private JMapper<User, UserWithRoleDTO> dtoToUseWithRoleMapper;
 
-    @Autowired
-    private BorrowingService borrowingService;
 
     @Autowired
     private RoleDao roleDao;
