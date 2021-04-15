@@ -1,0 +1,7 @@
+CategoryServiceTest.class
+BorrowingServiceTest.class
+AuthorServiceTest.class
+UserServiceTest.class
+CopyServiceTest.class
+WaitListServiceTest.class
+BookServiceTest.class

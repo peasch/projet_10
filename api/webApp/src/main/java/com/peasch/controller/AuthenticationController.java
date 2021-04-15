@@ -4,12 +4,12 @@ import com.peasch.controller.security.config.JwtTokenProvider;
 import com.peasch.controller.security.service.CustomUserDetailsService;
 import com.peasch.model.dto.Role.RoleDto;
 import com.peasch.model.dto.User.AuthBody;
-import com.peasch.model.dto.User.UserConnectedDto;
 import com.peasch.model.dto.User.UserDto;
 import com.peasch.model.dto.User.UserWithRoleDTO;
 import com.peasch.service.RoleService;
 import com.peasch.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -39,22 +39,21 @@ public class AuthenticationController {
     @Autowired
     private CustomUserDetailsService customUserDetailsService;
 
-    @SuppressWarnings("rawtypes")
     @PostMapping("/login")
-    public String login(@RequestBody AuthBody data) throws AuthenticationException {
+    public ResponseEntity login(@RequestBody AuthBody data) throws AuthenticationException {
         try {
             String userName = data.getUserName();
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userName, data.getPassword()));
 
-        String token = jwtTokenProvider.createToken(userName, userService.findUserByUserNameWithRole(userName).getRoles());
+       return new ResponseEntity( jwtTokenProvider.createToken(userName, userService.findUserByUserNameWithRole(userName).getRoles()), HttpStatus.OK);
 
-            return token;
         }catch (BadCredentialsException e) {
-            throw new AuthenticationException("Invalid Username/password");
+            /*throw new AuthenticationException("Invalid Username/password");*/
+return new ResponseEntity("Invalid Username/password",HttpStatus.BAD_REQUEST);
         }
 
     }
-    @SuppressWarnings("rawtypes")
+
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody UserWithRoleDTO user) {
         Set<RoleDto> roles = new HashSet<>();

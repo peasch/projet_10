@@ -1,8 +1,5 @@
 package com.peasch.model.dto.User;
 
-import com.googlecode.jmapper.annotations.JGlobalMap;
-
-
 public class AuthBody {
     private String userName;
     private String password;
@@ -21,5 +18,8 @@ public class AuthBody {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public AuthBody() {
     }
 }

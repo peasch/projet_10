@@ -1,8 +1,6 @@
 
 e
 5src/main/java/com/peasch/webbooks/Beans/UserBean.java,3\4\34a14b6ba6c81e659fd50a50fc8325681fc24b9e
-W
-'src/main/resources/templates/login.html,6\4\64b48127ab06e5df4a6ed58b34ac3aba28784c99
 j
 :src/main/java/com/peasch/webbooks/Beans/UserConnected.java,5\7\57235a3cb42355e2a1ffd47a6a2155ac965e2ea7
 y
@@ -33,3 +31,5 @@ e
 5src/main/java/com/peasch/webbooks/Beans/BookBean.java,5\9\59526674a9bddd5d14fe0d5a4b3bdcdffffa7df5
 j
 :src/main/java/com/peasch/webbooks/Beans/BorrowingBean.java,b\f\bfd035360d844fee99292c4790f311334abd5c62
+x
+Hsrc/main/java/com/peasch/webbooks/exceptions/BadMotDePasseException.java,2\6\26c4a2e5bdca3897344d38de3e8d2fa9c3e0eae7

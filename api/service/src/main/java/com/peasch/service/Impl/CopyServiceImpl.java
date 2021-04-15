@@ -1,7 +1,6 @@
 package com.peasch.service.Impl;
 
 import com.googlecode.jmapper.JMapper;
-import com.peasch.model.dto.Book.BookDto;
 import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
 import com.peasch.model.dto.copies.CopyDto;
 import com.peasch.model.dto.copies.CopyWithALLDTO;
@@ -13,6 +12,7 @@ import com.peasch.repository.dao.CopyDao;
 import com.peasch.service.BookService;
 import com.peasch.service.CopyService;
 import com.peasch.service.LibraryService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -57,7 +57,7 @@ public class CopyServiceImpl implements CopyService {
 
     }
 
-    public CopyWithALLDTO findByCopyWithAll(Copy copy) {
+    public CopyWithALLDTO findByCopyWithAll(Copy copy) throws NotFoundException {
         CopyWithALLDTO copyDto = copyWithAllToDTOMapper.getDestination(copy);
         copyDto.setBook(bookService.findById(copy.getBook().getId()));
         copyDto.setLibrary(libService.findById(copy.getLibrary().getId()));

@@ -1,7 +1,5 @@
 package com.peasch.model.entities;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
+
 
 import javax.persistence.*;
 import java.io.Serializable;

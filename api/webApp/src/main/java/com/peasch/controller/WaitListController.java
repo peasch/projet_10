@@ -26,7 +26,7 @@ public class WaitListController {
     BookService bookService;
 
     @GetMapping("/add/{id}")
-    public void addUserToWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token){
+    public void addUserToWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
         UserDto user = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
         service.save(user, id);
     }

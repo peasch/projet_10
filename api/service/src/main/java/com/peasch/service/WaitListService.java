@@ -11,7 +11,7 @@ public interface WaitListService {
 
     List<WaitListWithAllDto> getWaitList();
     List<WaitListWithAllDto> waitListByBookId(Integer bookId);
-    WaitListWithAllDto save(UserDto user, Integer id);
+    WaitListWithAllDto save(UserDto user, Integer id) throws NotFoundException;
     Boolean isWaitListable(Integer bookId);
     void deleteWaitlistDemand (Integer waitListId) throws NotFoundException;
     Boolean ExistingWaitList (Integer bookId, UserDto user);

@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38d00099-5b72-482a-812c-8d001de3d56c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../client web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client web/src/main/java/com/peasch/webbooks/Beans/WaitListBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/src/main/java/com/peasch/webbooks/Beans/WaitListBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/templates/bookDescribe.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/src/main/resources/templates/bookDescribe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/src/main/resources/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/library-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/library-management-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/repository/repository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/repository/repository.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/webApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/webApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +89,7 @@
       <workItem from="1617198736348" duration="1000000" />
       <workItem from="1617204437407" duration="3939000" />
       <workItem from="1617372725328" duration="3901000" />
-      <workItem from="1617625886828" duration="594000" />
+      <workItem from="1617625886828" duration="1189000" />
     </task>
     <task id="LOCAL-00001" summary="commit unique mais définitif">
       <created>1607692299540</created>

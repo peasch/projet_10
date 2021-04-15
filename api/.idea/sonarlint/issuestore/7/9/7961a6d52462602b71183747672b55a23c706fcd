@@ -1,5 +1,5 @@
 
-\
-java:S11263"AReplace this if-then-else statement by a single return statement.(¼æ×ôûÿÿÿÿ
-E
-java:S54113"*Use the primitive boolean expression here.(¼æ×ôûÿÿÿÿ
+C
+java:S5411"*Use the primitive boolean expression here.(¼æ×ôûÿÿÿÿ
+Z
+java:S1126"AReplace this if-then-else statement by a single return statement.(¼æ×ôûÿÿÿÿ

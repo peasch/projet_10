@@ -10,14 +10,13 @@ import com.peasch.model.dto.copies.CopyWithALLDTO;
 import com.peasch.model.entities.Borrowing;
 import com.peasch.model.entities.Copy;
 import com.peasch.repository.dao.BorrowingDao;
-import com.peasch.service.BookService;
 import com.peasch.service.BorrowingService;
 import com.peasch.service.CopyService;
 import com.peasch.service.WaitListService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -63,7 +62,7 @@ public class BorrowingServiceImpl implements BorrowingService {
 
     }
 
-    public BorrowingWithAllDTO findByIdWithAll(Integer id) {
+    public BorrowingWithAllDTO findByIdWithAll(Integer id) throws NotFoundException {
         Borrowing borrow = borrowingDao.findById(id).get();
         BorrowingWithAllDTO borrowingDto = borrowingWithAllToDTOMapper.getDestination(borrow);
         borrowingDto.setCopy(copyService.findByCopyWithAll(borrow.getCopy()));
@@ -84,7 +83,7 @@ public class BorrowingServiceImpl implements BorrowingService {
     }
 
 
-    public Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(Integer id) {
+    public Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(Integer id) throws NotFoundException {
         Set<BorrowingWithAllDTO> returnedBorrowDtos = new HashSet<>();
         Set<Borrowing> borrowings = borrowingDao.findBorrowingByUser_IdAndAndReturnedIsTrue(id);
         for (Borrowing borrow : borrowings) {
@@ -93,7 +92,7 @@ public class BorrowingServiceImpl implements BorrowingService {
         return returnedBorrowDtos;
     }
 
-    public Set<BorrowingWithAllDTO> findUnReturnedBorrowingsByUserId(Integer id) {
+    public Set<BorrowingWithAllDTO> findUnReturnedBorrowingsByUserId(Integer id) throws NotFoundException {
         Set<BorrowingWithAllDTO> unReturnedBorrowDtos = new HashSet<>();
         Set<Borrowing> borrowings = borrowingDao.findBorrowingByUser_IdAndAndReturnedIsFalse(id);
         for (Borrowing borrow : borrowings) {
@@ -103,7 +102,7 @@ public class BorrowingServiceImpl implements BorrowingService {
         return unReturnedBorrowDtos;
     }
 
-    public Boolean bookRentable(Integer userId, Integer bookId) {
+    public Boolean bookRentable(Integer userId, Integer bookId) throws NotFoundException {
         Boolean rentable = true;
         Set<BorrowingWithAllDTO> borrowDtos = this.findUnReturnedBorrowingsByUserId(userId);
         for (BorrowingWithAllDTO borrowingWithAllDTO : borrowDtos) {
