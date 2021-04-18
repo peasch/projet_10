@@ -1,7 +1,6 @@
 package com.peasch.service;
 
 import com.peasch.model.dto.Book.BookDto;
-import com.peasch.model.dto.Book.BookWithAllDTO;
 import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
 import com.peasch.model.entities.Book;
 import com.peasch.model.entities.Research;
@@ -15,7 +14,8 @@ public interface BookService {
 
     BookWithoutCopiesDTO findById(Integer id) throws NotFoundException;
 
-    Book save(Book book);
+    BookDto save(BookDto book);
+    void delete(int id);
     List<BookWithoutCopiesDTO> findBooksByResearch(Research research) throws NotFoundException;
     Book checkAvailabilityOfBook(Book book);
     List<BookWithoutCopiesDTO> getBooksAvailable() throws NotFoundException;

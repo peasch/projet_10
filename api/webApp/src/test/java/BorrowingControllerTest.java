@@ -59,6 +59,8 @@ public class BorrowingControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
                 .andReturn().getResponse().getContentAsString();
 
+
+
 //        borrowing persistence
        MvcResult result= mockMvc.perform(post("/borrowings/add").header("Authorization", token)
                 .content(borrowingToString).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk()).andReturn();
@@ -97,9 +99,18 @@ public class BorrowingControllerTest {
             String token = "bearer " + mockMvc.perform(post("/api/auth/login").content(jsonRequest)
                     .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
                     .andReturn().getResponse().getContentAsString();
+//            Get borrowings
+
+            mockMvc.perform(get("/borrowings").header("Authorization", token))
+                    .andExpect(content().contentType(MediaType.APPLICATION_JSON));
+
+//             get borrowing with id
+
+            mockMvc.perform(get("/borrowings/2").header("Authorization", token))
+                    .andExpect(content().contentType(MediaType.APPLICATION_JSON));
 
 //            unextendablility borrowing for late checking
-            mockMvc.perform(post("/borrowings/extend/1").header("Authorization", token))
+            mockMvc.perform(post("/borrowings/extend/2").header("Authorization", token))
                     .andExpect(status().isForbidden());
 
         }

@@ -60,7 +60,7 @@ public class BookController {
         String token = (String) session.getAttribute("token");
         BookBean book = mUserProxy.getBookById(id, token);
         Boolean alreadyDemanded = mUserProxy.existingWaitList(id, token);
-        List<LibraryBean> libraries = mUserProxy.getLibraries(token);
+
         Map<Integer, Integer> bookMap = mUserProxy.getCopiesofBookInLibraries(id, token);
         int numberOfCopiesAvailable = mUserProxy.getNumberOfCopiesAvailable(id, token);
         int numberOfCopiesTotal = mUserProxy.getNumberOfCopies(id, token);
@@ -77,7 +77,7 @@ public class BookController {
         model.addAttribute("localDate", LocalDate.now());
         model.addAttribute("book", book);
         model.addAttribute("bookMap", bookMap);
-        model.addAttribute("libraries", libraries);
+
         model.addAttribute("numberOfCopiesAvailable", numberOfCopiesAvailable);
         model.addAttribute("numberOfCopies", numberOfCopiesTotal);
         model.addAttribute("rentable", rentable);
@@ -93,7 +93,7 @@ public class BookController {
         Boolean rentable = mUserProxy.rentableBook(id, token);
         Boolean alreadyDemanded = mUserProxy.existingWaitList(id, token);
         Boolean waitListable = mUserProxy.isWaitListable(id, token);
-        List<LibraryBean> libraries = mUserProxy.getLibraries(token);
+
         BookBean book = mUserProxy.getBookById(id, token);
         Map<Integer, Integer> bookMap = mUserProxy.getCopiesofBookInLibraries(id, token);
         int numberOfCopiesAvailable = mUserProxy.getNumberOfCopiesAvailable(id, token);
@@ -106,7 +106,7 @@ public class BookController {
         model.addAttribute("localDate", LocalDate.now());
         model.addAttribute("book", book);
         model.addAttribute("bookMap", bookMap);
-        model.addAttribute("libraries", libraries);
+
         model.addAttribute("numberOfCopiesAvailable", numberOfCopiesAvailable);
         model.addAttribute("numberOfCopies", numberOfCopiesTotal);
         model.addAttribute("rentable", rentable);
@@ -122,7 +122,7 @@ public class BookController {
         Boolean rentable = mUserProxy.rentableBook(id, token);
         Boolean alreadyDemanded = mUserProxy.existingWaitList(id, token);
         Boolean waitListable = mUserProxy.isWaitListable(id, token);
-        List<LibraryBean> libraries = mUserProxy.getLibraries(token);
+
         BookBean book = mUserProxy.getBookById(id, token);
         Map<Integer, Integer> bookMap = mUserProxy.getCopiesofBookInLibraries(id, token);
         int numberOfCopiesAvailable = mUserProxy.getNumberOfCopiesAvailable(id, token);
@@ -137,7 +137,7 @@ public class BookController {
         model.addAttribute("localDate", LocalDate.now());
         model.addAttribute("book", book);
         model.addAttribute("bookMap", bookMap);
-        model.addAttribute("libraries", libraries);
+
         model.addAttribute("numberOfCopiesAvailable", numberOfCopiesAvailable);
         model.addAttribute("numberOfCopies", numberOfCopiesTotal);
         model.addAttribute("rentable", rentable);

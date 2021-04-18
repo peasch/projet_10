@@ -23,6 +23,9 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private JMapper<BookDto, Book> bookJMapper;
     @Autowired
+    private JMapper<Book, BookDto> dtoToBookMapper;
+
+    @Autowired
     private CopyService copyService;
     @Autowired
     private AuthorService authorService;
@@ -72,10 +75,14 @@ public class BookServiceImpl implements BookService {
     }*/
 
 
-    public Book save(Book book) {
-        return bookDao.save(book);
+    public BookDto save(BookDto book) {
+        return bookJMapper.getDestination(bookDao.save(dtoToBookMapper.getDestination(book)));
     }
 
+    public void delete(int id){
+        Book book = bookDao.findById(id).get();
+        bookDao.delete(book);
+    }
 
     public List<BookWithoutCopiesDTO> findBooksByResearch(Research research) throws NotFoundException {
         List<BookWithoutCopiesDTO> booksDtoResearched = new ArrayList<>();

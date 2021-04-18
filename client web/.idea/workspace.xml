@@ -2,38 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717cf4ea-fcc4-4fad-83bf-18a207081db3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/model/target/classes/com/peasch/model/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/target/classes/com/peasch/model/entities/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/model/target/classes/com/peasch/model/entities/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/target/classes/com/peasch/model/entities/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/repository/src/main/java/com/peasch/repository/dao/Impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/repository/src/main/java/com/peasch/repository/dao/Impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/repository/src/main/java/com/peasch/repository/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/repository/src/main/java/com/peasch/repository/dao/RoleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/repository/src/main/java/com/peasch/repository/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/repository/src/main/java/com/peasch/repository/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/repository/target/classes/com/peasch/repository/dao/Impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/repository/target/classes/com/peasch/repository/dao/Impl/UserDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/BorrowingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/BorrowingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/CopyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/CopyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/BorrowingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/BorrowingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/CopyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/CopyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/BorrowingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/BorrowingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/CopyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/CopyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/BorrowingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/BorrowingServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/CopyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/CopyServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/BorrowingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/BorrowingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/CopyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/CopyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Author/AuthorWithBooksDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithAllDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithAuthorDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithCategoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithCopiesDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Borrowings/BorrowingWithCopyAndUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Categories/CategorywithBooksDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Role/RoleWithUserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/User/UserConnectedDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/User/UserWithBorrowingsDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WAitListWithUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WaitListWithAllDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WaitListWithAllDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WaitListWithBookDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/copies/CopyWithBookDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/copies/CopyWithLibraryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/libraries/LibraryWithCopiesDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/WaitListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/WaitListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/WaitListServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/WaitListServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/WaitListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/WaitListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/test/java/BookControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/test/java/BookControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/webApp/src/test/java/BorrowingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/test/java/BorrowingControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/webApp/src/test/java/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/test/java/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/BorrowingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/BorrowingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/CopyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/CopyController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/security/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/security/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/WaitListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/WaitListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/test-classes/BookControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/test-classes/BookControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/test-classes/BorrowingControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/test-classes/BorrowingControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/webApp/target/test-classes/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/test-classes/UserControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +181,7 @@
       <workItem from="1618388327447" duration="2039000" />
       <workItem from="1618474243797" duration="4095000" />
       <workItem from="1618674664249" duration="1883000" />
+      <workItem from="1618757381054" duration="1245000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit du client web P7">
       <created>1600634443266</created>

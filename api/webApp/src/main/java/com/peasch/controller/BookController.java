@@ -2,7 +2,6 @@ package com.peasch.controller;
 
 import com.peasch.model.dto.Book.BookDto;
 import com.peasch.model.dto.Book.BookWithoutCopiesDTO;
-import com.peasch.model.entities.Book;
 import com.peasch.model.entities.Research;
 import com.peasch.service.BookService;
 import javassist.NotFoundException;
@@ -36,8 +35,12 @@ public class BookController {
     }
 
     @PostMapping("add")
-    public void addBook (@RequestBody Book book, @RequestHeader(name = "Authorization") String token){
-        service.save(book);
+    public BookDto addBook (@RequestBody BookDto book, @RequestHeader(name = "Authorization") String token){
+        return service.save(book);
+    }
+    @GetMapping("delete/{id}")
+    public void deleteBook(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
+        service.delete(id);
     }
 
     @PostMapping("search")

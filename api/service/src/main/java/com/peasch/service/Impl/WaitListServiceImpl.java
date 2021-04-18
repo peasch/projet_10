@@ -74,7 +74,7 @@ public class WaitListServiceImpl implements WaitListService {
     public WaitListWithAllDto save(UserDto user, Integer id) throws NotFoundException {
         BookWithoutCopiesDTO book = bookService.findById(id);
         WaitListWithAllDto waitListWithAllDto = new WaitListWithAllDto();
-        /*waitListWithAllDto.setBook(book);*/
+        waitListWithAllDto.setBook(book);
         waitListWithAllDto.setUser(user);
         waitListWithAllDto.setWaitListDate(LocalDate.now());
         waitListWithAllDto.setFirstReturnDate(borrowingService.findBorrowingsByBookId(book.getId()));

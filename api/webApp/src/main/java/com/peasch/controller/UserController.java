@@ -29,10 +29,6 @@ public class UserController {
         return userDto;
     }
 
-    @PostMapping("/user/add")
-    public void addUser(@RequestBody UserDto userDto) {
-        service.save(userDto);
-    }
 
     @GetMapping("/user/username/{username}")
     public UserDto getUserByUserName(@PathVariable(value = "username") String userName) {

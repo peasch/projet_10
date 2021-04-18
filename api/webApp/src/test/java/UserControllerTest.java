@@ -2,6 +2,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.peasch.controller.LibraryApplication;
 import com.peasch.model.dto.User.AuthBody;
+import com.peasch.model.dto.User.UserDto;
 import com.peasch.model.dto.User.UserWithRoleDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -40,6 +41,7 @@ public class UserControllerTest {
 
     @Test
     public void testGetUsers() throws Exception {
+
         mockMvc.perform(get("/users")).andExpect(status().is4xxClientError());
     }
 
@@ -49,8 +51,16 @@ public class UserControllerTest {
         body.setUserName("d");
         body.setPassword("test123");
         String jsonRequest = mapper.writeValueAsString(body);
+        String token = "bearer " + mockMvc.perform(post("/api/auth/login").content(jsonRequest).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
 
-        mockMvc.perform(post("/api/auth/login").content(jsonRequest).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
+       MvcResult result = mockMvc.perform(get("/user/username/d").header("Authorization", token)).andExpect(status().isOk()).andReturn();
+        UserDto user = mapper.readValue(result.getResponse().getContentAsString(), UserDto.class);
+        mockMvc.perform(get("/users").header("Authorization", token)).andExpect(status().isOk());
+        mockMvc.perform(get("/user/1").header("Authorization", token)).andExpect(status().isOk());
+        mockMvc.perform(get("/borrowings/rentable/15").header("Authorization", token)).andExpect(status().isOk());
+        mockMvc.perform(get("/borrowings/returned/11").header("Authorization", token)).andExpect(status().isOk());
+        mockMvc.perform(get("/borrowings/unreturned/11").header("Authorization", token)).andExpect(status().isOk());
 
     }
 
