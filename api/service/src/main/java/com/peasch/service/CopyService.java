@@ -23,5 +23,6 @@ public interface CopyService {
     int findNumberOfCopiesAvailable(Integer bookId);
     List<CopyDto> findCopiesByBook_Id(Integer bookId);
     int findNumberOfCopies(Integer bookId);
+    boolean isCopyAvailable (int Id);
 }
 

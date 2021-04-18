@@ -1,12 +1,12 @@
 
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ§¶ºüÿÿÿÿ
-T
-java:S2441D">Make "UserBean" serializable or don't store it in the session.(®êøÏ
-l
-java:S1192G"JDefine a constant instead of duplicating this literal "localDate" 4 times.(’¦Ú´ÿÿÿÿÿ8‡”Õ‰å.
-c	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó®Ü›
 a
 java:S1192!"FDefine a constant instead of duplicating this literal "token" 4 times.(©íàþøÿÿÿÿ
+T
+java:S2441D">Make "UserBean" serializable or don't store it in the session.(®êøÏ
+c	java:S100>"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó®Ü›
+l
+java:S1192G"JDefine a constant instead of duplicating this literal "localDate" 4 times.(’¦Ú´ÿÿÿÿÿ8‡”Õ‰å.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ§¶ºüÿÿÿÿ
 a
 java:S11923"FDefine a constant instead of duplicating this literal "index" 3 times.(¦œû×ÿÿÿÿÿ
 m

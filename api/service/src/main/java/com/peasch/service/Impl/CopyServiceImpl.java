@@ -107,4 +107,9 @@ public class CopyServiceImpl implements CopyService {
         this.save(copyWithALLDTO);
         return copyWithALLDTO;
     }
+
+    public boolean isCopyAvailable (int Id){
+        Copy copy = copyDao.findById(Id).get();
+        return copy.isAvailable();
+    }
 }

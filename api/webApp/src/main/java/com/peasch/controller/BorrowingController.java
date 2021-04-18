@@ -9,6 +9,7 @@ import com.peasch.service.BorrowingService;
 import com.peasch.service.UserService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -26,6 +27,7 @@ public class BorrowingController {
     @Autowired
     private UserService userService;
 
+
     @GetMapping
     public List<BorrowingDto> getBorrowings( @RequestHeader(name = "Authorization") String token){
         return service.getBorrowings();
@@ -37,12 +39,16 @@ public class BorrowingController {
     }
 
     @PostMapping("add")
-    public void addBorrowing (@RequestBody BorrowingWithAllDTO borrowingWithAllDTO, @RequestHeader(name = "Authorization") String token){
-        service.addBorrowing(borrowingWithAllDTO.getUser(),borrowingWithAllDTO.getCopy());
+    public BorrowingWithAllDTO addBorrowing (@RequestBody BorrowingWithAllDTO borrowingWithAllDTO, @RequestHeader(name = "Authorization") String token){
+        return service.addBorrowing(borrowingWithAllDTO);
     }
 
+    @GetMapping("delete")
+    public ResponseEntity deleteBorrowing (@RequestBody BorrowingWithAllDTO borrowingWithAllDTO, @RequestHeader(name = "Authorization") String token){
+        return service.deleteBorrowing(borrowingWithAllDTO);
+    }
     @PostMapping("extend/{id}")
-    public BorrowingWithAllDTO extendBorrowing(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
+    public ResponseEntity extendBorrowing(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
      return service.extendByIdWithAll(id);
     }
 
@@ -52,7 +58,7 @@ public class BorrowingController {
     }
 
     @PostMapping("return/{id}")
-    public BorrowingWithAllDTO returnBorrowing (@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
+    public ResponseEntity returnBorrowing (@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
         UserDto employee = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
         return service.returnBorrowing(id,employee);
     }
@@ -76,4 +82,6 @@ public class BorrowingController {
     public Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
         return service.findReturnedBorrowingsByUserId(id);
     }
+
+
 }

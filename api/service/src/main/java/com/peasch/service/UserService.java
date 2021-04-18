@@ -14,5 +14,6 @@ public interface UserService {
     UserWithRoleDTO findUserByUserNameWithRole(String userName);
     UserDto findIfExistsUsername(String userName);
     UserWithRoleDTO saveWithRole(UserWithRoleDTO userDto);
+    void deleteUser(String userName);
 
 }

@@ -45,4 +45,8 @@ public class CopyController {
     public int getNumberOfCopies(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
         return service.findNumberOfCopies(id);
     }
+    @GetMapping("isAvailable/{id}")
+    public boolean isCopyAvailable(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
+        return service.isCopyAvailable(id);
+    }
 }

@@ -4,9 +4,8 @@ import com.peasch.model.dto.Borrowings.BorrowingDto;
 import com.peasch.model.dto.Borrowings.BorrowingLateDTO;
 import com.peasch.model.dto.Borrowings.BorrowingWithAllDTO;
 import com.peasch.model.dto.User.UserDto;
-import com.peasch.model.dto.copies.CopyWithALLDTO;
-import com.peasch.model.entities.Borrowing;
 import javassist.NotFoundException;
+import org.springframework.http.ResponseEntity;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -23,10 +22,11 @@ public interface BorrowingService {
 
     Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(Integer id) throws NotFoundException;
     Set<BorrowingWithAllDTO> findUnReturnedBorrowingsByUserId(Integer id) throws NotFoundException;
-    BorrowingWithAllDTO extendByIdWithAll(Integer id);
+    ResponseEntity extendByIdWithAll(Integer id);
     Set<BorrowingLateDTO> findAllTooLateBorrowings();
-    BorrowingWithAllDTO returnBorrowing(Integer id, UserDto employee);
-    BorrowingWithAllDTO addBorrowing(UserDto user, CopyWithALLDTO copy);
+    ResponseEntity returnBorrowing(Integer id, UserDto employee);
+    BorrowingWithAllDTO addBorrowing(BorrowingWithAllDTO borrowingWithAllDTO);
+    ResponseEntity deleteBorrowing (BorrowingWithAllDTO borrowingWithAllDTO);
     Boolean bookRentable(Integer userId, Integer bookId) throws NotFoundException;
     LocalDate findBorrowingsByBookId (Integer bookId);
 }

@@ -38,4 +38,9 @@ public class UserController {
     public UserDto getUserByUserName(@PathVariable(value = "username") String userName) {
             return service.findUserByUserName(userName);
     }
+
+    @GetMapping("/user/delete")
+    public void deleteUser(@RequestBody UserDto userDto, @RequestHeader(name = "Authorization") String token) {
+        service.deleteUser(userDto.getUserName());
+    }
 }
