@@ -10,6 +10,7 @@ import com.peasch.service.BookService;
 import com.peasch.service.BorrowingService;
 import com.peasch.service.CopyService;
 import com.peasch.service.WaitListService;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -70,10 +71,10 @@ public class WaitListServiceImpl implements WaitListService {
         }
     }
 
-    public WaitListWithAllDto save(UserDto user, Integer id) {
+    public WaitListWithAllDto save(UserDto user, Integer id) throws NotFoundException {
         BookWithoutCopiesDTO book = bookService.findById(id);
         WaitListWithAllDto waitListWithAllDto = new WaitListWithAllDto();
-        /*waitListWithAllDto.setBook(book);*/
+        waitListWithAllDto.setBook(book);
         waitListWithAllDto.setUser(user);
         waitListWithAllDto.setWaitListDate(LocalDate.now());
         waitListWithAllDto.setFirstReturnDate(borrowingService.findBorrowingsByBookId(book.getId()));

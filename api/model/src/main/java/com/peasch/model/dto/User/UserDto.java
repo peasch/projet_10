@@ -22,10 +22,15 @@ public class UserDto implements Serializable {
 
     private String birthDate;
 
-
+    public UserDto(String userName, String password, String email) {
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+    }
 
     public UserDto() {
     }
+
 
 
     public int getId() {

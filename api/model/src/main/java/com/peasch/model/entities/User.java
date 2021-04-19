@@ -1,7 +1,5 @@
 package com.peasch.model.entities;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -35,7 +33,17 @@ public class User implements Serializable{
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private Set<Borrowing> borrowings = new HashSet<>();
 
-    @ManyToMany(mappedBy = "users",fetch = FetchType.LAZY)
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_has_role",
+            joinColumns = {
+                    @JoinColumn(name = "user_id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "role_id")
+            }
+    )
     private Set < Role > roles = new HashSet <> ();
 
     public User() {

@@ -3,13 +3,13 @@ r
 java:S1128"PRemove this unused import 'com.peasch.model.dto.Borrowings.BorrowingWithAllDTO'.(õÎŞ×ùÿÿÿÿ8İ‰Éˆ/
 u
 java:S14889"_Immediately return this expression instead of assigning it to the temporary variable "userDto".(¬Ğë
-b
-java:S1128	"@Remove this unused import 'com.peasch.model.entities.Borrowing'.(®ø¾šÿÿÿÿÿ8İ‰Éˆ/
 ]
 java:S1128"@Remove this unused import 'com.peasch.service.BorrowingService'.(°™½™8Ø‰ŠÉˆ/
 M
 java:S36558"7Call "Optional#isPresent()" before accessing the value.(¼¶…¯
-]	java:S125f"<This block of commented-out lines of code should be removed.(ÿ–Óğüÿÿÿÿ8ø®ˆÉˆ/
+b
+java:S1128	"@Remove this unused import 'com.peasch.model.entities.Borrowing'.(®ø¾šÿÿÿÿÿ8İ‰Éˆ/
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ
+]	java:S125f"<This block of commented-out lines of code should be removed.(ÿ–Óğüÿÿÿÿ8ø®ˆÉˆ/
 M
 java:S3655?"7Call "Optional#isPresent()" before accessing the value.(¼¶…¯

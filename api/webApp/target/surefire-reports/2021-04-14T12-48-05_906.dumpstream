@@ -1,0 +1,15 @@
+# Created at 2021-04-14T12:48:19.514
+WARNING: An illegal reflective access operation has occurred
+
+# Created at 2021-04-14T12:48:19.515
+WARNING: Illegal reflective access by javassist.ClassPool (file:/C:/Users/peasc/.m2/repository/org/javassist/javassist/3.22.0-CR1/javassist-3.22.0-CR1.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+
+# Created at 2021-04-14T12:48:19.515
+WARNING: Please consider reporting this to the maintainers of javassist.ClassPool
+
+# Created at 2021-04-14T12:48:19.516
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+
+# Created at 2021-04-14T12:48:19.517
+WARNING: All illegal access operations will be denied in a future release
+

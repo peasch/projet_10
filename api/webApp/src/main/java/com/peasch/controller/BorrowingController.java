@@ -5,11 +5,11 @@ import com.peasch.model.dto.Borrowings.BorrowingDto;
 import com.peasch.model.dto.Borrowings.BorrowingLateDTO;
 import com.peasch.model.dto.Borrowings.BorrowingWithAllDTO;
 import com.peasch.model.dto.User.UserDto;
-import com.peasch.model.entities.Borrowing;
 import com.peasch.service.BorrowingService;
 import com.peasch.service.UserService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -27,23 +27,28 @@ public class BorrowingController {
     @Autowired
     private UserService userService;
 
+
     @GetMapping
     public List<BorrowingDto> getBorrowings( @RequestHeader(name = "Authorization") String token){
         return service.getBorrowings();
     }
 
     @GetMapping("{id}")
-    public BorrowingWithAllDTO getBorrowingById(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token){
+    public BorrowingWithAllDTO getBorrowingById(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
         return service.findByIdWithAll(id);
     }
 
     @PostMapping("add")
-    public void addBorrowing (@RequestBody BorrowingWithAllDTO borrowingWithAllDTO, @RequestHeader(name = "Authorization") String token){
-        service.addBorrowing(borrowingWithAllDTO.getUser(),borrowingWithAllDTO.getCopy());
+    public BorrowingWithAllDTO addBorrowing (@RequestBody BorrowingWithAllDTO borrowingWithAllDTO, @RequestHeader(name = "Authorization") String token){
+        return service.addBorrowing(borrowingWithAllDTO);
     }
 
+    @GetMapping("delete")
+    public ResponseEntity deleteBorrowing (@RequestBody BorrowingWithAllDTO borrowingWithAllDTO, @RequestHeader(name = "Authorization") String token){
+        return service.deleteBorrowing(borrowingWithAllDTO);
+    }
     @PostMapping("extend/{id}")
-    public BorrowingWithAllDTO extendBorrowing(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
+    public ResponseEntity extendBorrowing(@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
      return service.extendByIdWithAll(id);
     }
 
@@ -53,13 +58,13 @@ public class BorrowingController {
     }
 
     @PostMapping("return/{id}")
-    public BorrowingWithAllDTO returnBorrowing (@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
+    public ResponseEntity returnBorrowing (@PathVariable(value="id")Integer id, @RequestHeader(name = "Authorization") String token){
         UserDto employee = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
         return service.returnBorrowing(id,employee);
     }
 
     @GetMapping("rentable/{id}")
-    public Boolean rentableBook (@PathVariable(value="id")Integer bookId,@RequestHeader(name = "Authorization") String token){
+    public Boolean rentableBook (@PathVariable(value="id")Integer bookId,@RequestHeader(name = "Authorization") String token) throws NotFoundException {
         UserDto user = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
         return service.bookRentable(user.getId(),bookId);
     }
@@ -69,12 +74,14 @@ public class BorrowingController {
     }
 
     @GetMapping("unreturned/{id}")
-    public Set<BorrowingWithAllDTO> findUnReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token){
+    public Set<BorrowingWithAllDTO> findUnReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
         return service.findUnReturnedBorrowingsByUserId(id);
     }
 
     @GetMapping("returned/{id}")
-    public Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token){
+    public Set<BorrowingWithAllDTO> findReturnedBorrowingsByUserId(@PathVariable(value = "id")Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
         return service.findReturnedBorrowingsByUserId(id);
     }
+
+
 }

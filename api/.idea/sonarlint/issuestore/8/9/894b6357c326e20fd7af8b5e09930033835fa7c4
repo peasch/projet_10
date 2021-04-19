@@ -1,13 +1,15 @@
 
-\
-java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ş‘‹„
-q
-java:S1128"]Remove this unused import 'org.springframework.security.core.userdetails.UserDetailsService'.(¶…¥à
-j
-java:S1128"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥
-”
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øş±,
-@
-java:S1948",Make "borrowings" transient or serializable.(¾İ¢
-;
-java:S1948"'Make "roles" transient or serializable.(ÁÀö»
+s
+java:S1128"]Remove this unused import 'org.springframework.security.core.userdetails.UserDetailsService'.(¶…¥à
+=
+java:S1948'"'Make "roles" transient or serializable.(ÁÀö»
+^
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonIgnore'.(ş‘‹„
+–
+java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(øş±,
+l
+java:S1128"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥
+B
+java:S1948$",Make "borrowings" transient or serializable.(¾İ¢
+F
+java:S1948!")Make "demands" transient or serializable.(¾Ö´¹8¸»Éˆ/

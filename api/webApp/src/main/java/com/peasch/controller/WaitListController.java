@@ -8,6 +8,8 @@ import com.peasch.service.UserService;
 import com.peasch.service.WaitListService;
 import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,9 +28,13 @@ public class WaitListController {
     BookService bookService;
 
     @GetMapping("/add/{id}")
-    public void addUserToWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token){
+    public ResponseEntity addUserToWaitList(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token) throws NotFoundException {
         UserDto user = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
-        service.save(user, id);
+        if (service.ExistingWaitList(id,user)){
+            return new ResponseEntity("il existe déjà une demande de réservation pour cet abonné", HttpStatus.FORBIDDEN);
+        }else{
+            return new ResponseEntity(service.save(user, id),HttpStatus.OK);
+        }
     }
 
     @GetMapping("/showList/{id}")

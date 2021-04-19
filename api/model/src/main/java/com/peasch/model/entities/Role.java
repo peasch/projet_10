@@ -13,16 +13,7 @@ public class Role {
     @Column(name = "role")
     private String role;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(
-            name = "user_has_role",
-            joinColumns = {
-                    @JoinColumn(name = "role_id")
-            },
-            inverseJoinColumns = {
-                    @JoinColumn(name = "user_id")
-            }
-    )
+    @ManyToMany(mappedBy = "roles",fetch = FetchType.LAZY)
     Set<User> users = new HashSet<>();
 
     public Role() {

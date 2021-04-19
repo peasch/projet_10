@@ -10,6 +10,9 @@ import javax.persistence.PersistenceContext;
 @Transactional
 @Repository
 public class UserDaoImpl{
+    @PersistenceContext
+    private EntityManager em;
+
 
 
 }

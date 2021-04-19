@@ -2,9 +2,7 @@ package com.peasch.service.Impl;
 
 import com.googlecode.jmapper.JMapper;
 import com.peasch.model.dto.Role.RoleDto;
-import com.peasch.model.dto.User.UserDto;
 import com.peasch.model.entities.Role;
-import com.peasch.model.entities.User;
 import com.peasch.repository.dao.RoleDao;
 import com.peasch.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +33,6 @@ public class RoleServiceImpl implements RoleService {
         List<Role> roles = roleDao.findAll();
         return roles.stream().map(x -> roleToDTOMapper.getDestination(x)).collect(Collectors.toList());
     }
+
+
 }

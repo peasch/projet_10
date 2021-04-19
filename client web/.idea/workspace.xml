@@ -2,7 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="717cf4ea-fcc4-4fad-83bf-18a207081db3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../batch/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Author/AuthorWithBooksDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithAllDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithAuthorDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithCategoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Book/BookWithCopiesDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Borrowings/BorrowingWithCopyAndUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Categories/CategorywithBooksDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/Role/RoleWithUserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/User/UserConnectedDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/User/UserWithBorrowingsDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WAitListWithUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WaitListWithAllDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WaitListWithAllDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/WaitList/WaitListWithBookDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/copies/CopyWithBookDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/copies/CopyWithLibraryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/src/main/java/com/peasch/model/dto/libraries/LibraryWithCopiesDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/BookServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/WaitListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/src/main/java/com/peasch/service/Impl/WaitListServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/WaitListServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/target/classes/com/peasch/service/Impl/WaitListServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/WaitListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/main/java/com/peasch/controller/WaitListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/test/java/BookControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/test/java/BookControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/test/java/BorrowingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/test/java/BorrowingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/src/test/java/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/src/test/java/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/WaitListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/classes/com/peasch/controller/WaitListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/test-classes/BookControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/test-classes/BookControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/test-classes/BorrowingControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/test-classes/BorrowingControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/target/test-classes/UserControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/target/test-classes/UserControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +178,10 @@
       <workItem from="1617177782643" duration="5424000" />
       <workItem from="1617193093278" duration="11999000" />
       <workItem from="1617548797661" duration="1803000" />
+      <workItem from="1618388327447" duration="2039000" />
+      <workItem from="1618474243797" duration="4095000" />
+      <workItem from="1618674664249" duration="1883000" />
+      <workItem from="1618757381054" duration="1245000" />
     </task>
     <task id="LOCAL-00001" summary="premier commit du client web P7">
       <created>1600634443266</created>
@@ -241,65 +275,57 @@
     </state>
     <state x="814" y="309" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1617193299193" />
     <state x="1085" y="416" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617376115140" />
-    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1609751532853">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="808" y="409" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.195.1920.1040@0.0.1920.1040" timestamp="1609751532853" />
     <state x="905" y="284" key="CommitChangelistDialog2" timestamp="1617626777646">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="905" y="284" key="CommitChangelistDialog2/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617626777646" />
-    <state x="795" y="328" key="FileChooserDialogImpl" timestamp="1609751514398">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="795" y="328" key="FileChooserDialogImpl/0.0.1920.1040/1920.195.1920.1040@0.0.1920.1040" timestamp="1609751514398" />
-    <state width="2517" height="284" key="GridCell.Tab.0.bottom" timestamp="1617378184056">
+    <state width="2517" height="284" key="GridCell.Tab.0.bottom" timestamp="1618475411918">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134336" />
-    <state width="2517" height="284" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184056" />
+    <state width="2517" height="284" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411918" />
     <state width="1877" height="323" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960581" />
-    <state width="2517" height="284" key="GridCell.Tab.0.center" timestamp="1617378184055">
+    <state width="2517" height="284" key="GridCell.Tab.0.center" timestamp="1618475411918">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134336" />
-    <state width="2517" height="284" key="GridCell.Tab.0.center/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184055" />
+    <state width="2517" height="284" key="GridCell.Tab.0.center/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411918" />
     <state width="1877" height="323" key="GridCell.Tab.0.center/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960581" />
-    <state width="2517" height="284" key="GridCell.Tab.0.left" timestamp="1617378184055">
+    <state width="2517" height="284" key="GridCell.Tab.0.left" timestamp="1618475411918">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134335" />
-    <state width="2517" height="284" key="GridCell.Tab.0.left/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184055" />
+    <state width="2517" height="284" key="GridCell.Tab.0.left/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411918" />
     <state width="1877" height="323" key="GridCell.Tab.0.left/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960580" />
-    <state width="2517" height="284" key="GridCell.Tab.0.right" timestamp="1617378184055">
+    <state width="2517" height="284" key="GridCell.Tab.0.right" timestamp="1618475411918">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134336" />
-    <state width="2517" height="284" key="GridCell.Tab.0.right/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184055" />
+    <state width="2517" height="284" key="GridCell.Tab.0.right/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411918" />
     <state width="1877" height="323" key="GridCell.Tab.0.right/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960581" />
-    <state width="2517" height="284" key="GridCell.Tab.1.bottom" timestamp="1617378184056">
+    <state width="2517" height="284" key="GridCell.Tab.1.bottom" timestamp="1618475411919">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134336" />
-    <state width="2517" height="284" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184056" />
+    <state width="2517" height="284" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411919" />
     <state width="1877" height="323" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960583" />
-    <state width="2517" height="284" key="GridCell.Tab.1.center" timestamp="1617378184056">
+    <state width="2517" height="284" key="GridCell.Tab.1.center" timestamp="1618475411918">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134336" />
-    <state width="2517" height="284" key="GridCell.Tab.1.center/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184056" />
+    <state width="2517" height="284" key="GridCell.Tab.1.center/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411918" />
     <state width="1877" height="323" key="GridCell.Tab.1.center/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960582" />
-    <state width="2517" height="284" key="GridCell.Tab.1.left" timestamp="1617378184056">
+    <state width="2517" height="284" key="GridCell.Tab.1.left" timestamp="1618475411918">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134336" />
-    <state width="2517" height="284" key="GridCell.Tab.1.left/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184056" />
+    <state width="2517" height="284" key="GridCell.Tab.1.left/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411918" />
     <state width="1877" height="323" key="GridCell.Tab.1.left/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960582" />
-    <state width="2517" height="284" key="GridCell.Tab.1.right" timestamp="1617378184056">
+    <state width="2517" height="284" key="GridCell.Tab.1.right" timestamp="1618475411919">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1877" height="478" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617198134336" />
-    <state width="2517" height="284" key="GridCell.Tab.1.right/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617378184056" />
+    <state width="2517" height="284" key="GridCell.Tab.1.right/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1618475411919" />
     <state width="1877" height="323" key="GridCell.Tab.1.right/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1616491960583" />
     <state x="1037" y="422" key="RollbackChangesDialog" timestamp="1617179801616">
       <screen x="0" y="0" width="2560" height="1400" />
@@ -308,9 +334,7 @@
     <state x="586" y="189" key="SettingsEditor" timestamp="1612174496849">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="189" key="SettingsEditor/0.0.1920.1040/1920.195.1920.1040@0.0.1920.1040" timestamp="1609751518642" />
     <state x="586" y="189" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1612174496849" />
-    <state x="781" y="342" key="SettingsEditor/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1609614920837" />
     <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1617626859828">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

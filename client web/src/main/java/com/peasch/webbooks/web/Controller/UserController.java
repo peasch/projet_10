@@ -28,9 +28,6 @@ public class UserController {
 
     private String secretKey1 = "spongeBob";
 
-    private SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
-    private SigningKeyResolver signingKeyResolver;
-
     @GetMapping("/users")
     public String users(ModelMap model, HttpSession session) {
         String token = (String) session.getAttribute("token");

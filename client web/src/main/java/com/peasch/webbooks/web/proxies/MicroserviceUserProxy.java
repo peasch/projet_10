@@ -32,11 +32,11 @@ public interface MicroserviceUserProxy {
 
     /*---------------------- LIBRARY -------------------------*/
 
-    @GetMapping("/libraries")
+    /*@GetMapping("/libraries")
     List<LibraryBean> getLibraries(@RequestHeader(name = "Authorization") String token);
 
     @GetMapping("/libraries/{id}")
-    LibraryBean getLibraryById(@PathVariable(value = "id")Integer id,@RequestHeader(name = "Authorization") String token);
+    LibraryBean getLibraryById(@PathVariable(value = "id")Integer id,@RequestHeader(name = "Authorization") String token);*/
 
 
     /*---------------------- BOOKS -----------------------*/
