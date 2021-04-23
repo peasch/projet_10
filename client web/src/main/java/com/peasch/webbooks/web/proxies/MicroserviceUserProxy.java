@@ -30,15 +30,7 @@ public interface MicroserviceUserProxy {
     @GetMapping("/user/username/{userName}")
     UserBean getUserByUserName(@PathVariable(value = "userName")String userName,@RequestHeader(name = "Authorization") String token);
 
-    /*---------------------- LIBRARY -------------------------*/
-
-    /*@GetMapping("/libraries")
-    List<LibraryBean> getLibraries(@RequestHeader(name = "Authorization") String token);
-
-    @GetMapping("/libraries/{id}")
-    LibraryBean getLibraryById(@PathVariable(value = "id")Integer id,@RequestHeader(name = "Authorization") String token);*/
-
-
+    
     /*---------------------- BOOKS -----------------------*/
 
     @GetMapping("/books")

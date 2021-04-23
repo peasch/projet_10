@@ -1,7 +1,7 @@
 
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(Ù‘…øÿÿÿÿÿ8ŒÆ¾™‰/
 X	java:S125'"<This block of commented-out lines of code should be removed.(¸¢ï˜8ŒÆ¾™‰/
 ]	java:S1258"<This block of commented-out lines of code should be removed.(Çß‰ýÿÿÿÿ8ŒÆ¾™‰/
+E	java:S108:")Either remove or fill this block of code.(å¥ž‡8¥¨Ï™‰/
 T
 java:S1481&"2Remove this unused "borrowingBean" local variable.(ÉÑŽýÿÿÿÿ8éºé™‰/
-E	java:S108:")Either remove or fill this block of code.(å¥ž‡8¥¨Ï™‰/
-Z	java:S1069"9Replace this use of System.out or System.err by a logger.(Ù‘…øÿÿÿÿÿ8ŒÆ¾™‰/

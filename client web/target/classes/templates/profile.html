@@ -130,7 +130,7 @@
                 <span th:text="${waitList.getBook().getAuthor().getName()}"></span></a>
             </div>
             <div class="col col-sm-3"style="padding: 5px">
-                <span>Disponible le </span><span th:text="${#temporals.format(waitList.getFirstReturnDate(), 'EEEE, d MMMM yyyy')}"></span>
+                <span>Retour initialement prévu le </span><span th:text="${#temporals.format(waitList.getFirstReturnDate(), 'EEEE, d MMMM yyyy')}"></span>
                 <p th:if="${waitList.getContactDate()!=null}">le livre est disponible, vous avez jusqu'au <span th:text="${#temporals.format(waitList.getContactDate().plusDays(2),'EEEE, d MMMM yyyy')}"></span> pour venir le récupérer.</p>
             </div>
             <div class="col col-sm-3">

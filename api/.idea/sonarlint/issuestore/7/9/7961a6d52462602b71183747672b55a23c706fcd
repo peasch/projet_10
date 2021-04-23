@@ -1,5 +1,13 @@
 
-C
-java:S5411"*Use the primitive boolean expression here.(¼æ×ôûÿÿÿÿ
-Z
-java:S1126"AReplace this if-then-else statement by a single return statement.(¼æ×ôûÿÿÿÿ
+K
+java:S3740$"/Provide the parametrized type for this generic.(ØİÎq8ñ®Úª/
+Q
+java:S3740"/Provide the parametrized type for this generic.(³Âˆãşÿÿÿÿ8Ï­Óª/
+L
+java:S3740""/Provide the parametrized type for this generic.(¦¡Â8ñ®Úª/
+\
+java:S1126<"AReplace this if-then-else statement by a single return statement.(¼æ×ôûÿÿÿÿ
+E
+java:S5411<"*Use the primitive boolean expression here.(¼æ×ôûÿÿÿÿ
+L
+java:S5411!"*Use the primitive boolean expression here.(¼æ×ôûÿÿÿÿ8ñ®Úª/

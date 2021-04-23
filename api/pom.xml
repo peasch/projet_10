@@ -19,7 +19,7 @@
 
     <groupId>com.peasch.library</groupId>
     <artifactId>library-management-system</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.3 RELEASE</version>
     <packaging>pom</packaging>
     <name>library-management-system</name>
     <description>Demo project for Spring Boot</description>

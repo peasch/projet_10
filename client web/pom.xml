@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.peasch</groupId>
     <artifactId>webbooks</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.1 RELEASE</version>
     <packaging>jar</packaging>
     <name>webbooks</name>
     <description>Demo project for Spring Boot</description>
