@@ -13,3 +13,4 @@ open your web Browser, et go on localhost:8080/home
 Open the entire folder in your IDE, and run the main class : LibraryApplication.class, and the client web main class.
 
 Create a data base on MySQL Workbench, et use the dumps to create et fill in the data.
+Modify the file application.properties with your database connexion properties.
