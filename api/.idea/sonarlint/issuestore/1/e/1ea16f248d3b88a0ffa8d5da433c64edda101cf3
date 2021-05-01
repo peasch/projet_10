@@ -1,21 +1,15 @@
 
-–
-java:S1130"tRemove the declaration of thrown exception 'javassist.NotFoundException', as it cannot be thrown from method's body.(À¦ıüÿÿÿÿ8–„¡­/
-L
-java:S3740"/Provide the parametrized type for this generic.(ï“ÍÚ8¡îß /
 Q
 java:S3740!"/Provide the parametrized type for this generic.(Á¬ÈÏûÿÿÿÿ8¡îß /
+L
+java:S3740"/Provide the parametrized type for this generic.(ï“ÍÚ8¡îß /
 [
 java:S1854"9Remove this useless assignment to local variable "books".(¶¨•ùÿÿÿÿ8»¬–Æˆ/
 L
+java:S1481"*Remove this unused "books" local variable.(¶¨•ùÿÿÿÿ8»¬–Æˆ/
+L
 java:S3740"/Provide the parametrized type for this generic.(±‡ØÀ8¡îß /
+‘
+java:S1130*"tRemove the declaration of thrown exception 'javassist.NotFoundException', as it cannot be thrown from method's body.(Ó÷äÌ8ôø¨è/
 >
 java:S1116/"Remove this empty statement.(ùí«Üüÿÿÿÿ8¡îß /
-L
-java:S1481"*Remove this unused "books" local variable.(¶¨•ùÿÿÿÿ8»¬–Æˆ/
-‘
-java:S1130"tRemove the declaration of thrown exception 'javassist.NotFoundException', as it cannot be thrown from method's body.(±‡ØÀ8ïªøÃ/
-–
-java:S1130/"tRemove the declaration of thrown exception 'javassist.NotFoundException', as it cannot be thrown from method's body.(ùí«Üüÿÿÿÿ8ïªøÃ/
-–
-java:S11305"tRemove the declaration of thrown exception 'javassist.NotFoundException', as it cannot be thrown from method's body.(ıõ˜ûÿÿÿÿ8ïªøÃ/
