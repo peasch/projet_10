@@ -1,6 +1,7 @@
 
+T
+java:S3655p"7Call "Optional#isPresent()" before accessing the value.(íÍç¢8£‰ô /
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ
 Y
 java:S36554"7Call "Optional#isPresent()" before accessing the value.(îóÌçüÿÿÿÿ8ıØÿ»ˆ/
-[
-java:S1128">Remove this unused import 'com.peasch.model.dto.Book.BookDto'.(ÈåÀ8ãÅ³Éˆ/
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ
+m	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú»Êş8Íšó /

@@ -1,10 +1,9 @@
 
-r	java:S1179"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôþÉœùÿÿÿÿ8©·ÿÿ‹/
+^
+java:S1126X"AReplace this if-then-else statement by a single return statement.(Œ€²ß8©·ÿÿ‹/
+r	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôþÉœùÿÿÿÿ8©·ÿÿ‹/
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶þÿÿÿÿ8©·ÿÿ‹/
 ^
-java:S1126:"AReplace this if-then-else statement by a single return statement.(ÔÖ«ò8©·ÿÿ‹/
+java:S1126C"AReplace this if-then-else statement by a single return statement.(ˆ¦žÅ8©·ÿÿ‹/
 ^
-java:S1126B"AReplace this if-then-else statement by a single return statement.(ˆ¦žÅ8©·ÿÿ‹/
-]	java:S125L"<This block of commented-out lines of code should be removed.(“Æêëøÿÿÿÿ8©·ÿÿ‹/
-^
-java:S1126W"AReplace this if-then-else statement by a single return statement.(Œ€²ß8©·ÿÿ‹/
+java:S1126;"AReplace this if-then-else statement by a single return statement.(ÔÖ«ò8©·ÿÿ‹/

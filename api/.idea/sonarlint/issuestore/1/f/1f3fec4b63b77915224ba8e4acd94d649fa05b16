@@ -1,9 +1,11 @@
 
-]	java:S125;"<This block of commented-out lines of code should be removed.(ø³’’øÿÿÿÿ8—ğâ–‹/
 _
-java:S1126U"BReplace this if-then-else statement by a single method invocation.(§ñâÜ8—ğâ–‹/
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ8—ğâ–‹/
-Y
-java:S36555"7Call "Optional#isPresent()" before accessing the value.(îÁ¡¾úÿÿÿÿ8—ğâ–‹/
+java:S1126b"BReplace this if-then-else statement by a single method invocation.(§ñâÜ8¨ÆÇ¬/
 L
-java:S5411-"*Use the primitive boolean expression here.(úó®µıÿÿÿÿ8—ğâ–‹/
+java:S54112"*Use the primitive boolean expression here.(úó®µıÿÿÿÿ8—ğâ–‹/
+Y
+java:S3655;"7Call "Optional#isPresent()" before accessing the value.(îÁ¡¾úÿÿÿÿ8—ğâ–‹/
+Y
+java:S3655S"7Call "Optional#isPresent()" before accessing the value.(îÁ¡¾úÿÿÿÿ8“ûÆ¬/
+]	java:S125D"<This block of commented-out lines of code should be removed.(ø³’’øÿÿÿÿ8—ğâ–‹/
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ8—ğâ–‹/

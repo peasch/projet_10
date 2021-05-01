@@ -2,14 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38d00099-5b72-482a-812c-8d001de3d56c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../api/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/library-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/library-management-system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/model/model.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/model.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/0/3/0320c34772c0822d54f11e133f795d3c18c2ca13" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/0/3/0320c34772c0822d54f11e133f795d3c18c2ca13" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/1/4/146181751efc5b27f2989e4f145a7e4971fb2804" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/1/4/146181751efc5b27f2989e4f145a7e4971fb2804" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/1/e/1e29cf600f59a626f9fa1283195e697ae5800d51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/1/e/1ea16f248d3b88a0ffa8d5da433c64edda101cf3" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/1/e/1ea16f248d3b88a0ffa8d5da433c64edda101cf3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/1/f/1f3fec4b63b77915224ba8e4acd94d649fa05b16" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/1/f/1f3fec4b63b77915224ba8e4acd94d649fa05b16" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/2/1/216dc86ab72522ab0f87a427260f517aa58753d2" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/2/1/216dc86ab72522ab0f87a427260f517aa58753d2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/2/d/2d9a5bcc9f4319366591bf9b1003438a07e68d72" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/2/d/2d9a5bcc9f4319366591bf9b1003438a07e68d72" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/2/e/2e660461e30fcdd95591d32f702ad08ae622f4ea" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/2/e/2e660461e30fcdd95591d32f702ad08ae622f4ea" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/3/1/31df1b47788b9a20ea699816f678aaa8e6d17970" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/3/1/31df1b47788b9a20ea699816f678aaa8e6d17970" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/4/9/4969f82579daefb8dd15df716e2c652c2dc49f89" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/4/9/4969f82579daefb8dd15df716e2c652c2dc49f89" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/4/f/4f40eeb18b996ba4fbcbe4de88ac9d888385bedb" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/4/f/4f40eeb18b996ba4fbcbe4de88ac9d888385bedb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/6/5/654ae2e132c4c223b7ad1f1241438246ba65cb24" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/6/5/654ae2e132c4c223b7ad1f1241438246ba65cb24" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/6/f/6f4aba71fd53881971b37f9f3d46393b1af9b069" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/6/f/6f4aba71fd53881971b37f9f3d46393b1af9b069" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/7/9/7961a6d52462602b71183747672b55a23c706fcd" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/7/9/7961a6d52462602b71183747672b55a23c706fcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/7/a/7a1b67f42cf499d80fa9e89a52f7ca0b9a061b63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/8/9/894b6357c326e20fd7af8b5e09930033835fa7c4" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/8/9/894b6357c326e20fd7af8b5e09930033835fa7c4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/9/2/922839dfa52a5e9ddb7864e5ef80d5c3237605d1" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/9/2/922839dfa52a5e9ddb7864e5ef80d5c3237605d1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/9/c/9cd396b43ffa1a62d438d97d7810fba6904b267a" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/9/c/9cd396b43ffa1a62d438d97d7810fba6904b267a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/a/2/a22304fd6c9363f91c54c3f5df27a7d0ba6bb4ca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/a/7/a7d823e016bb00bc951ab5d4bec55dd4fc8c9c7f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/a/9/a94b8c1a9cddb79cf012055bf6bc2d34fb71ec2e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/a/b/ab86ba80a9739f14d1866af4b22d1bf5e835a80d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/a/f/afeacfa127f0e7ccefd4a379f0af06e1e7b266ee" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/a/f/afeacfa127f0e7ccefd4a379f0af06e1e7b266ee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/b/3/b368166b0d83fb61903872b47be5353beaee6f4d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/b/d/bdc9f6a57cb2e88069e9f1f9e71f0a8fcf4c27ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/c/a/ca913efb68de4da7652bd19343d6390b363df439" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/c/a/ca913efb68de4da7652bd19343d6390b363df439" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/d/3/d3b54d60d0cd1d493766f748464c219ffd024e93" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/d/3/d3b54d60d0cd1d493766f748464c219ffd024e93" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/e/6/e69d7e335a2798e61766acde432e9e1d6c214209" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/e/6/e69d7e335a2798e61766acde432e9e1d6c214209" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/e/9/e9e1ef043438bbf9d03a90afad369f8380a562df" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/e/9/e9e1ef043438bbf9d03a90afad369f8380a562df" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../api/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/model/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/repository/repository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/repository/repository.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/service/service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../api/webApp/webApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/webApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/repository/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/repository/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api/webApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api/webApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/.idea/sonarlint/issuestore/2/f/2fb72e05079475185ac4b495098dc3f5202781b8" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/.idea/sonarlint/issuestore/2/f/2fb72e05079475185ac4b495098dc3f5202781b8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/.idea/sonarlint/issuestore/b/f/bfd035360d844fee99292c4790f311334abd5c62" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/.idea/sonarlint/issuestore/b/f/bfd035360d844fee99292c4790f311334abd5c62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/.idea/sonarlint/issuestore/e/b/eb77e2bd1e76b0a347fd7de1cc124d85fe09a23c" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/.idea/sonarlint/issuestore/e/b/eb77e2bd1e76b0a347fd7de1cc124d85fe09a23c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/java/com/peasch/webbooks/web/proxies/MicroserviceUserProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/src/main/java/com/peasch/webbooks/web/proxies/MicroserviceUserProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/actrices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/facebook_share.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/facebook_video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/github.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/google_translate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/me.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/misstoysy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/openclassroom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/parquet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/serpent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/twitter_retweet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/twitter_video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/static/img/youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/src/main/resources/templates/bookList.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/src/main/resources/templates/bookList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/actrices.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/facebook_share.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/facebook_video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/github.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/google_translate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/me.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/misstoysy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/openclassroom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/parquet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/serpent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/twitter_retweet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/twitter_video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/static/img/youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client web/target/classes/templates/bookList.html" beforeDir="false" afterPath="$PROJECT_DIR$/../client web/target/classes/templates/bookList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +153,7 @@
       <workItem from="1617204437407" duration="3939000" />
       <workItem from="1617372725328" duration="3901000" />
       <workItem from="1617625886828" duration="1189000" />
+      <workItem from="1619069421308" duration="2620000" />
     </task>
     <task id="LOCAL-00001" summary="commit unique mais définitif">
       <created>1607692299540</created>
@@ -113,60 +177,56 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1085" y="416" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617206931287" />
-    <state x="2728" y="604" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1609751818211">
-      <screen x="1920" y="195" width="1920" height="1040" />
-    </state>
-    <state x="2728" y="604" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.195.1920.1040@1920.195.1920.1040" timestamp="1609751818211" />
     <state x="1060" y="401" key="FileChooserDialogImpl" timestamp="1616485962277">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="401" key="FileChooserDialogImpl/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1616485962277" />
-    <state width="1877" height="401" key="GridCell.Tab.0.bottom" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.0.bottom" timestamp="1619119386845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200797" />
+    <state width="1877" height="401" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386845" />
     <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
-    <state width="1877" height="401" key="GridCell.Tab.0.center" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.0.center" timestamp="1619119386844">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200797" />
+    <state width="1877" height="401" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386844" />
     <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
-    <state width="1877" height="401" key="GridCell.Tab.0.left" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.0.left" timestamp="1619119386844">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200797" />
+    <state width="1877" height="401" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386844" />
     <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
-    <state width="1877" height="401" key="GridCell.Tab.0.right" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.0.right" timestamp="1619119386845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200797" />
+    <state width="1877" height="401" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386845" />
     <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
-    <state width="1877" height="401" key="GridCell.Tab.1.bottom" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.1.bottom" timestamp="1619119386846">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200798" />
+    <state width="1877" height="401" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386846" />
     <state width="2517" height="281" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
-    <state width="1877" height="401" key="GridCell.Tab.1.center" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.1.center" timestamp="1619119386845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200798" />
+    <state width="1877" height="401" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386845" />
     <state width="2517" height="281" key="GridCell.Tab.1.center/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.1.center/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
-    <state width="1877" height="401" key="GridCell.Tab.1.left" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.1.left" timestamp="1619119386845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200797" />
+    <state width="1877" height="401" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386845" />
     <state width="2517" height="281" key="GridCell.Tab.1.left/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.1.left/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
-    <state width="1877" height="401" key="GridCell.Tab.1.right" timestamp="1617378186581">
-      <screen x="2560" y="363" width="1920" height="1040" />
+    <state width="1877" height="401" key="GridCell.Tab.1.right" timestamp="1619119386845">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617198200798" />
+    <state width="1877" height="401" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619119386845" />
     <state width="2517" height="281" key="GridCell.Tab.1.right/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617373157758" />
     <state width="1877" height="401" key="GridCell.Tab.1.right/0.0.2560.1400/2560.363.1920.1040@2560.363.1920.1040" timestamp="1617378186581" />
     <state width="2517" height="492" key="GridCell.Tab.2.bottom" timestamp="1617209143867">
@@ -192,7 +252,6 @@
     <state x="976" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1617177916022">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="732" y="389" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610372356395" />
     <state x="976" y="524" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.363.1920.1040@0.0.2560.1400" timestamp="1617177916022" />
     <state x="871" y="424" key="new project wizard" timestamp="1616485956272">
       <screen x="0" y="0" width="2560" height="1400" />

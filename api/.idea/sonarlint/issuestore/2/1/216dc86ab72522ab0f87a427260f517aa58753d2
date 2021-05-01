@@ -1,24 +1,32 @@
 
-M
-java:S5411£"*Use the primitive boolean expression here.(¥¾½“ùÿÿÿÿ8§üıÃˆ/
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ
-]
-java:S1128";Remove this unused import 'com.peasch.service.BookService'.(±ûøÿÿÿÿ8ö²Éˆ/
-U
-java:S3655‚"7Call "Optional#isPresent()" before accessing the value.(²‹É8ˆôèÆˆ/
-T
-java:S1128"7Remove this unused import 'java.text.SimpleDateFormat'.(ú¡ÙÛ8ìúŒÆˆ/
-O
-java:S1481d"-Remove this unused "idBorrow" local variable.(÷±¬Øıÿÿÿÿ8ìúŒÆˆ/
-^
-java:S1854d"<Remove this useless assignment to local variable "idBorrow".(÷±¬Øıÿÿÿÿ8ìúŒÆˆ/
-T
-java:S3655w"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
-L
-java:S1481·".Remove this unused "firstDate" local variable.(å¶¡8§üıÃˆ/
-T
-java:S3655C"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
-U
-java:S3655›"7Call "Optional#isPresent()" before accessing the value.(²‹É8¬®áóì.
 S
-java:S3655="7Call "Optional#isPresent()" before accessing the value.(çÈ8¬®áóì.
+java:S3655>"7Call "Optional#isPresent()" before accessing the value.(çÈ8ØàŸ/
+^
+java:S1854e"<Remove this useless assignment to local variable "idBorrow".(÷±¬Øıÿÿÿÿ8ØàŸ/
+M
+java:S5411«"*Use the primitive boolean expression here.(¥¾½“ùÿÿÿÿ8ŒÔõ¢/
+O
+java:S1481e"-Remove this unused "idBorrow" local variable.(÷±¬Øıÿÿÿÿ8ØàŸ/
+T
+java:S3655D"7Call "Optional#isPresent()" before accessing the value.(²‹É8ØàŸ/
+Z
+java:S3655»"7Call "Optional#isPresent()" before accessing the value.(Â‡ãúÿÿÿÿ8ŒÔõ¢/
+M
+java:S3740®"/Provide the parametrized type for this generic.(ˆ ©8ŒÔõ¢/
+L
+java:S3740"/Provide the parametrized type for this generic.(ˆ ©8ç®˜£/
+U
+java:S3655Š"7Call "Optional#isPresent()" before accessing the value.(²‹É8ŒÔõ¢/
+T
+java:S3655y"7Call "Optional#isPresent()" before accessing the value.(²‹É8ØàŸ/
+L
+java:S1481É".Remove this unused "firstDate" local variable.(å¶¡8ŒÔõ¢/
+M
+java:S3740À"/Provide the parametrized type for this generic.(»®æ·8ŒÔõ¢/
+R
+java:S3740Â"/Provide the parametrized type for this generic.(ìÙ°Åùÿÿÿÿ8ŒÔõ¢/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶şÿÿÿÿ
+R
+java:S3740„"/Provide the parametrized type for this generic.(»òšÊøÿÿÿÿ8Œœš£/
+U
+java:S3655£"7Call "Optional#isPresent()" before accessing the value.(²‹É8ŒÔõ¢/
