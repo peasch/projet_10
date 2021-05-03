@@ -1,9 +1,12 @@
 
-^
-java:S1126X"AReplace this if-then-else statement by a single return statement.(Œ€²ß8©·ÿÿ‹/
-r	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôþÉœùÿÿÿÿ8©·ÿÿ‹/
+[
+java:S1155o">Use isEmpty() to check whether the collection is empty or not.(œÒŽó8ëÈÝí’/
+m	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¬¤8ÆÏ¶ê’/
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÃì¶þÿÿÿÿ8©·ÿÿ‹/
 ^
-java:S1126C"AReplace this if-then-else statement by a single return statement.(ˆ¦žÅ8©·ÿÿ‹/
+java:S1126X"AReplace this if-then-else statement by a single return statement.(Œ€²ß8©·ÿÿ‹/
 ^
 java:S1126;"AReplace this if-then-else statement by a single return statement.(ÔÖ«ò8©·ÿÿ‹/
+^
+java:S1126C"AReplace this if-then-else statement by a single return statement.(ˆ¦žÅ8©·ÿÿ‹/
+r	java:S117:"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôþÉœùÿÿÿÿ8©·ÿÿ‹/

@@ -97,4 +97,7 @@ public interface MicroserviceUserProxy {
 
     @GetMapping("/waitList/user/")
     List<WaitListBean> getAllWLofUser( @RequestHeader(name = "Authorization") String token);
+
+    @GetMapping("/waitList/waitListPosition/{id}")
+    int waitListPosition(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token);
 }

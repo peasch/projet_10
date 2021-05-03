@@ -108,9 +108,14 @@ public class WaitListServiceImpl implements WaitListService {
             } else if (firstWaitLister.getContactDate().plusDays(2).compareTo(today) < 0) {
                 this.deleteWaitlistDemand(firstWaitLister.getId());
                 waitLists = this.waitListByBookId(id);
-                firstWaitLister = waitLists.get(0);
+                if (waitLists.size()>0){
+                    firstWaitLister = waitLists.get(0);
+
                 firstWaitLister.setContactDate(today);
                 this.update(firstWaitLister);
+                }else{
+                    return null;
+                }
             }
             return firstWaitLister;
         } else {
@@ -118,11 +123,22 @@ public class WaitListServiceImpl implements WaitListService {
         }
 
     }
+
     public WaitListWithAllDto update(WaitListWithAllDto waitListWithAllDto) {
 
         return dtoToWaitListMapper.getDestination(waitListDao.save(wLToDtoMapper.getDestination(waitListWithAllDto)));
     }
 
-
+    public int waitListPosition(int bookId, UserDto user) {
+        int position =-1;
+        List<WaitListWithAllDto> waitList = this.waitListByBookId(bookId);
+        for (int i =0;i<waitList.size();i++) {
+            WaitListWithAllDto WL = waitList.get(i);
+            if (WL.getUser().getId()==user.getId()) {
+                position = i+1;
+            }
+        }
+        return position;
+    }
 
 }

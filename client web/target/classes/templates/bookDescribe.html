@@ -33,8 +33,9 @@
                 <span th:text="${library.name} "></span><span>:</span>
                 <span th:text="${bookMap.get(library.id)}"></span><span> exemplaires disponibles</span>
             </div>-->
-            <span th:text="${numberOfCopiesAvailable}"></span><span> exemplaires disponibles, sur </span><span
-                th:text="${numberOfCopies}"></span><span> exemplaires.</span>
+            <span th:text="${numberOfCopiesAvailable}"></span><span> exemplaire(s) disponible(s), sur </span><span
+                th:text="${numberOfCopies}"></span><span> exemplaire(s).</span><br>
+            <span  th:text="${waitListSize}"></span><span> personne(s) sur la liste d'attente. </span>
         </div>
         <div class="black-divider"></div>
         <div class="col col-sm-12" >
@@ -42,7 +43,7 @@
             <h6><span th:text="${#temporals.format(firstDate, 'EEEE, d MMMM yyyy')}"></span></h6>
         </div>
         <div class="black-divider"></div>
-        <div th:if="${numberOfCopiesAvailable==0 && rentable==true && !alreadydemanded}" class="col col-sm-12"
+        <div th:if="${numberOfCopiesAvailable==0 && rentable==true && !alreadydemanded && waitListable}" class="col col-sm-12"
              style="text-align: center;margin:20px">
 
             <a th:class="button2" th:href="@{|/book/waitList/add/${book.id}|}" style="color: black">Demande de
@@ -53,12 +54,13 @@
             <h4>Vous êtes déjà en possession de cet ouvrage.</h4>
             <div class="black-divider"></div>
         </div>
-        <div th:if="${waitListable==false}" >
+        <div th:if="${waitListable==false && !alreadydemanded}" >
             <h4>Impossible de le réserver pour le moment.</h4>
             <div class="black-divider"></div>
         </div>
         <div th:if="${alreadydemanded}" class="col col-sm-12">
             <h4>Vous avez déjà une réservation pour cet ouvrage.</h4>
+            <span>position dans la liste d'attente : </span><span th:text="${position}"></span><br>
             <a th:class="button2" th:href="@{|/book/waitList/delete/${book.id}|}" style="color: black">Annuler ma réservation</a>
             <div class="black-divider"></div>
         </div>

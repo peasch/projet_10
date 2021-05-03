@@ -1,15 +1,12 @@
 package com.peasch.model.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @Table(name="borrowing")
 
-public class Borrowing {
+public class    Borrowing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

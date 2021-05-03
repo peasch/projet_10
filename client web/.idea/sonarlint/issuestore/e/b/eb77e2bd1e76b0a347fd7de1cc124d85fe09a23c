@@ -1,26 +1,30 @@
 
-e
-java:S1854{"CRemove this useless assignment to local variable "alreadyDemanded".(çÌ¿ùÿÿÿÿ8©İ¼ºˆ/
-j
-java:S1192O"HDefine a constant instead of duplicating this literal "bookMap" 3 times.(ÄË–şÿÿÿÿ8õ–¡Äˆ/
-a
-java:S1192"FDefine a constant instead of duplicating this literal "token" 6 times.(©íàşøÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ§¶ºüÿÿÿÿ
-l
-java:S1192R"ODefine a constant instead of duplicating this literal "numberOfCopies" 3 times.(Ú¥ä8©İ¼ºˆ/
-l
-java:S1192F"JDefine a constant instead of duplicating this literal "firstDate" 3 times.(ºÃƒêıÿÿÿÿ8©İ¼ºˆ/
-o
-java:S1192V"MDefine a constant instead of duplicating this literal "bookDescribe" 3 times.(±Şæ×ÿÿÿÿÿ8©İ¼ºˆ/
-m	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Öÿ–8©İ¼ºˆ/
-n	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Öÿ–8©İ¼ºˆ/
 k
-java:S1192S"IDefine a constant instead of duplicating this literal "rentable" 3 times.(Ù›¸Ìÿÿÿÿÿ8©İ¼ºˆ/
-r
-java:S1192T"PDefine a constant instead of duplicating this literal "alreadydemanded" 3 times.(òÖó±ûÿÿÿÿ8©İ¼ºˆ/
+java:S1192Z"IDefine a constant instead of duplicating this literal "rentable" 3 times.(Ù›¸Ìÿÿÿÿÿ8©İ¼ºˆ/
 e
 java:S1192"JDefine a constant instead of duplicating this literal "localDate" 6 times.(’¦Ú´ÿÿÿÿÿ
-z
-java:S1192Q"XDefine a constant instead of duplicating this literal "numberOfCopiesAvailable" 3 times.(†²àÔıÿÿÿÿ8©İ¼ºˆ/
+o
+java:S1192]"MDefine a constant instead of duplicating this literal "bookDescribe" 3 times.(±Şæ×ÿÿÿÿÿ8©İ¼ºˆ/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ§¶ºüÿÿÿÿ
+l
+java:S1192Y"ODefine a constant instead of duplicating this literal "numberOfCopies" 3 times.(Ú¥ä8©İ¼ºˆ/
 G
 java:S5411H"*Use the primitive boolean expression here.(˜·¾€8©İ¼ºˆ/
+L
+java:S5411L"*Use the primitive boolean expression here.(øĞÏïıÿÿÿÿ8âÜÄ’/
+z
+java:S1192X"XDefine a constant instead of duplicating this literal "numberOfCopiesAvailable" 3 times.(†²àÔıÿÿÿÿ8©İ¼ºˆ/
+r
+java:S1192["PDefine a constant instead of duplicating this literal "alreadydemanded" 3 times.(òÖó±ûÿÿÿÿ8©İ¼ºˆ/
+j
+java:S1192W"MDefine a constant instead of duplicating this literal "waitListable" 3 times.(¾’Õ­8ğ—¡Ä’/
+m	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Öÿ–8©İ¼ºˆ/
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Öÿ–8©İ¼ºˆ/
+j
+java:S1192V"HDefine a constant instead of duplicating this literal "bookMap" 3 times.(ÄË–şÿÿÿÿ8õ–¡Äˆ/
+l
+java:S1192F"JDefine a constant instead of duplicating this literal "firstDate" 3 times.(ºÃƒêıÿÿÿÿ8©İ¼ºˆ/
+f
+java:S1854‚"CRemove this useless assignment to local variable "alreadyDemanded".(çÌ¿ùÿÿÿÿ8©İ¼ºˆ/
+a
+java:S1192"FDefine a constant instead of duplicating this literal "token" 6 times.(©íàşøÿÿÿÿ

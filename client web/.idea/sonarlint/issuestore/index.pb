@@ -33,3 +33,5 @@ j
 :src/main/java/com/peasch/webbooks/Beans/BorrowingBean.java,b\f\bfd035360d844fee99292c4790f311334abd5c62
 x
 Hsrc/main/java/com/peasch/webbooks/exceptions/BadMotDePasseException.java,2\6\26c4a2e5bdca3897344d38de3e8d2fa9c3e0eae7
+x
+Hsrc/main/java/com/peasch/webbooks/web/Controller/WaitListController.java,7\b\7b355c6d840fbd0dff233a3a548c761ba382de4a

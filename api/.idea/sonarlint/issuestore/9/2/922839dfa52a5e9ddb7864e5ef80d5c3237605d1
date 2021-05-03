@@ -1,14 +1,14 @@
 
-Q
-java:S37404"/Provide the parametrized type for this generic.(Œ†Àíÿÿÿÿÿ8»® „/
 Ÿ
 java:S1130+"}Remove the declaration of thrown exception 'javax.naming.AuthenticationException', as it cannot be thrown from method's body.(Áâ±İÿÿÿÿÿ8»® „/
 L
 java:S37400"/Provide the parametrized type for this generic.(¾í”8»® „/
-Q
-java:S3740:"/Provide the parametrized type for this generic.(Ä›Õşÿÿÿÿ8»® „/
-X	java:S1253"<This block of commented-out lines of code should be removed.(Ò¢˜ü8»® „/
 S
 java:S1854<"8Remove this useless assignment to local variable "role".(ª¥¯†úÿÿÿÿ
 Q
 java:S3740+"/Provide the parametrized type for this generic.(Áâ±İÿÿÿÿÿ8»® „/
+Q
+java:S37404"/Provide the parametrized type for this generic.(Œ†Àíÿÿÿÿÿ8»® „/
+X	java:S1253"<This block of commented-out lines of code should be removed.(Ò¢˜ü8»® „/
+Q
+java:S3740:"/Provide the parametrized type for this generic.(Ä›Õşÿÿÿÿ8»® „/

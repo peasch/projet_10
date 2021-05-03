@@ -169,3 +169,11 @@ z
 Jrepository/src/main/java/com/peasch/repository/dao/Impl/AuthorDaoImpl.java,4\f\4f4dd44fa2842e72c35e3c5dbb44df92c64bb643
 \
 ,webApp/src/test/java/BookControllerTest.java,0\8\08cb1ddcb571805c3b9b92927fe1112c3352a140
+q
+Arepository/src/main/java/com/peasch/repository/dao/AuthorDao.java,6\f\6f5fe73a50231cefd5c52037f588fb6d198a2b26
+V
+&webApp/src/main/webapp/WEB-INF/web.xml,a\6\a6cf79f4fefb7059251f059d15e4fa590ea43e8d
+|
+Lrepository/src/main/java/com/peasch/repository/dao/Impl/WaitListDaoImpl.java,b\9\b9a017b6a26fd710851088b937486aa56cfec479
+[
++webApp/src/main/webapp/META-INF/MANIFEST.MF,5\0\50458670147568e2e899c0182e3422cf70be8d9c

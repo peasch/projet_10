@@ -41,7 +41,7 @@ public class ScheduledTasks {
         }
     }
 
-    @Scheduled(fixedDelay = 180000)
+    @Scheduled(fixedDelay = 4000)
     public void waitListChecking() {
         UserBean batchUser = new UserBean();
         LocalDate now = LocalDate.now();

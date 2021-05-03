@@ -83,4 +83,10 @@ public class WaitListController {
     public WaitListWithAllDto checkWaitListOfBook(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token)  {
        return service.availableBookofWaitLists(id);
     }
+
+    @GetMapping("/waitListPosition/{id}")
+    public int waitListPosition(@PathVariable(value = "id") Integer id, @RequestHeader(name = "Authorization") String token){
+        UserDto user = userService.findUserByUserName(jwtTokenProvider.getUsername(token.substring(7)));
+        return service.waitListPosition(id,user);
+    }
 }
