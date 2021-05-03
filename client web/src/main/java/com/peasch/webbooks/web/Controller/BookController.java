@@ -60,7 +60,7 @@ public class BookController {
         String token = (String) session.getAttribute("token");
         BookBean book = mUserProxy.getBookById(id, token);
         Boolean alreadyDemanded = mUserProxy.existingWaitList(id, token);
-
+        Boolean waitListable = false;
         Map<Integer, Integer> bookMap = mUserProxy.getCopiesofBookInLibraries(id, token);
         int numberOfCopiesAvailable = mUserProxy.getNumberOfCopiesAvailable(id, token);
         int numberOfCopiesTotal = mUserProxy.getNumberOfCopies(id, token);
@@ -73,11 +73,18 @@ public class BookController {
             WaitListBean WL = mUserProxy.getWaitListOfUserThisBook(id, token);
             model.addAttribute("WL", WL);
         }
+        if(mUserProxy.isWaitListable(id,token)){
+            waitListable = true;
+        }
+        int position = mUserProxy.waitListPosition(id,token);
+        int waitListSize = mUserProxy.getWaitListsOfBook(id,token).size();
         Boolean rentable = mUserProxy.rentableBook(id, token);
         model.addAttribute("localDate", LocalDate.now());
         model.addAttribute("book", book);
+        model.addAttribute("position", position);
+        model.addAttribute("waitListSize", waitListSize);
         model.addAttribute("bookMap", bookMap);
-
+        model.addAttribute("waitListable",waitListable);
         model.addAttribute("numberOfCopiesAvailable", numberOfCopiesAvailable);
         model.addAttribute("numberOfCopies", numberOfCopiesTotal);
         model.addAttribute("rentable", rentable);
